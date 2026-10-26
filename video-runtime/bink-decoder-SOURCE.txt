@@ -1,0 +1,7 @@
+Project New Shoes compact Bink Video v1 decoder
+License: GNU GPL version 3 or later
+Derived from infinitier_bik_decoder revision a9a01212fe7104417246ff6ca922319f5f3f859b
+Upstream source: https://github.com/ufoscout/infinitier/tree/a9a01212fe7104417246ff6ca922319f5f3f859b/src/codecs/bik_decoder
+Modified source: WebAssembly/bink-decoder in the corresponding Project New Shoes source tree
+Changes: removed unrelated workspace/WAV/helper dependencies; added the focused browser ABI and BGRA output.
+This standalone module is fetched only when an installed classic-Bink movie is opened.

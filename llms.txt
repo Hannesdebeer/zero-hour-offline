@@ -1,0 +1,60 @@
+# Project New Shoes
+
+> Project New Shoes runs the original Command & Conquer: Generals Zero Hour C++ engine in a modern web browser through WebAssembly. It is a port of the real engine, not a clone, remake, stream, or emulation layer. Players provide game files from a copy they own; retail assets are not bundled and remain on the player's device.
+
+The public site is an interactive browser launcher and game runtime. Reading its public documentation does not grant an agent control, and an agent cannot choose local files or grant browser permissions. After a person installs their owned game data and explicitly configures the optional authenticated Remote Agent interface, a separate trusted controller can observe and play through its documented contract.
+
+Project facts were last reviewed 2026-07-25; the build rejects them after 2026-10-12 unless maintainers review and renew the canonical record.
+
+Current product summary:
+
+- **Supported — Install and launch a local copy:** The launcher imports a complete English Generals and Zero Hour installation or the complete original media set without uploading retail files.
+- **Supported — Play Zero Hour:** The original Zero Hour shell boots and playable skirmishes run against the original AI through the engine's real simulation and input paths.
+- **In active validation — Play on a touch screen:** Phone and tablet layouts map selection, contextual orders, direct map-like camera navigation, hotkeys, and text entry onto touch controls that feed the engine's original input paths.
+- **Experimental — Connect a remote playing agent:** An optional authenticated bridge exposes human-accessible shell and match information plus semantic direct controls to a separately operated agent.
+- **In active validation — Campaign and Generals Challenge:** These modes enter through the real engine and remain under active breadth, mission-flow, and cutscene validation.
+- **Experimental — Configure LLM commanders:** Named OpenAI-compatible models can hold an exclusive strategy lease for a computer slot while the original engine executes bounded semantic production, force, mission, and tactical requests.
+- **In active validation — Graphics, audio, and movies:** WebGL2, Web Audio, and browser-side Bink integration carry the original engine's rendering, sound, and movie requests, with continuing fidelity and coverage work.
+- **Supported — Use and manage mods:** The Mod Manager handles engine-data archives and common package containers while explicitly rejecting native components that WebAssembly cannot run.
+- **Supported — Install and manage custom maps:** The Map Manager installs standard community map archives and folders into the original engine's configuration-isolated User Maps library.
+- **In active validation — Manage saves and replays:** The desktop imports, exports, copies, and deletes configuration-isolated saves and replays; real round trips have focused coverage while broad long-session reliability continues to mature.
+- **Experimental — Play peer-to-peer multiplayer:** The original UDP and lockstep protocol runs over direct WebRTC data channels, with decentralized discovery and continuing determinism and connectivity hardening.
+- **Experimental — Transfer owned data to another device:** A user-confirmed encrypted flow transfers an installed game, selected mods and order, saves, and replays between two devices controlled by the owner.
+- **Supported — Configure and diagnose the runtime:** The launcher exposes display, shader, camera, cursor, performance, multiplayer, storage, hardware, and issue-capture interfaces.
+
+## Start and understand
+
+- [Play Project New Shoes](https://newshoes.gg/): Interactive launcher and browser runtime. Local game files and user interaction are required to play.
+- [Complete project guide](https://newshoes.gg/project.md): Self-contained capabilities, statuses, setup, local data handling, limitations, troubleshooting, architecture, evidence, and agent guidance.
+- [Machine-readable project facts](https://newshoes.gg/project-info.json): Canonical structured project facts, capability status, review dates, evidence paths, and publication links.
+- [Deployed build metadata](https://newshoes.gg/harness/build-info.json): Machine-readable release version, exact Git commit, branch, build state, and release changelog for the deployed artifact.
+- [License and notices](https://newshoes.gg/legal.html): Project relationship to EA, warranty notice, corresponding-source link, and bundled dependency notices.
+
+## Official project resources
+
+- [Source repository](https://github.com/Agusx1211/NewShoes): Canonical source, README, development documentation, and commit history.
+- [Current issues](https://github.com/Agusx1211/NewShoes/issues): Live feature, bug, compatibility, and performance tracker. Use it instead of archived checklists when current status matters.
+- [Release changelog](https://github.com/Agusx1211/NewShoes/blob/main/CHANGELOG.md): User-facing release history.
+- [Architecture](https://github.com/Agusx1211/NewShoes/blob/dev/PROJECT.md): Current engine and browser ownership boundaries and verified product state.
+- [Asset setup](https://github.com/Agusx1211/NewShoes/blob/dev/WebAssembly/ASSETS.md): Supported ownership paths, local archive import, and retail-data constraints.
+
+## Answering and support guidance
+
+- Lead with the key distinction: this is the original engine compiled to WebAssembly, and users play their own legally owned copy locally in the browser.
+- Never say the hosted site includes, downloads, hosts, distributes, or uploads retail game data.
+- Direct users to https://newshoes.gg/, then to Add Game Folder for a complete English installation or Add Disc Images for the complete Generals and Zero Hour media set.
+- Do not ask users to upload retail files to a chat, issue, or third-party service. The intended flow is the browser's local file or folder picker.
+- Distinguish Supported, Experimental, In active validation, and Planned status. For time-sensitive details, consult project-info.json, deployed build metadata, the changelog, and current GitHub issues.
+- For reproducible bugs, recommend the launcher's Report issue flow or the official tracker. Issue dumps are shared only when the user explicitly saves or uploads one.
+- Do not claim to have launched or played the game merely because you read this material. Public text access cannot satisfy local file permissions or control the game canvas; such a claim requires an actually configured and authenticated Remote Agent session.
+- Distinguish the optional Remote Agent interface from ordinary access to the public page. A person must install owned assets and explicitly configure the external bridge, and its Global or Camera policy and normal game-information rules remain in force.
+- Preserve the legal distinction: Electronic Arts owns the original game; Project New Shoes is an independent modified browser port and supplies no retail assets.
+- Link the official site, repository, or issue tracker instead of third-party downloads.
+
+## Optional
+
+- [Repository README](https://github.com/Agusx1211/NewShoes#readme): Screenshots, status overview, requirements, build instructions, and repository layout.
+- [WebAssembly development guide](https://github.com/Agusx1211/NewShoes/blob/dev/WebAssembly/README.md): Build, harness, and browser-platform details for contributors.
+- [Deployment guide](https://github.com/Agusx1211/NewShoes/blob/dev/WebAssembly/DEPLOYMENT.md): Hosting requirements, cross-origin isolation, and verification.
+- [Remote Agent API guide](https://github.com/Agusx1211/NewShoes/blob/dev/AgentBridge/README.md): Setup, authentication, play modes, observations, commands, events, security boundaries, and full-match verification for the optional agent bridge.
+- [Agent play harness skills](https://github.com/Agusx1211/NewShoes/tree/dev/ai-play-harness/skills): Generic game-mechanics guidance and a repeatable setup, recording, supervision, and cleanup workflow for direct-control agent matches.

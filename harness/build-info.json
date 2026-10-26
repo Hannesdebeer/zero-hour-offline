@@ -1,0 +1,1578 @@
+{
+  "schema": "cnc.harness-build-info.v1",
+  "generatedAt": "2026-09-23T01:43:22.806Z",
+  "server": null,
+  "git": {
+    "available": true,
+    "commit": "3ccaa0e9af66889be183ca910851e881d47d437c",
+    "shortCommit": "3ccaa0e9af66",
+    "branch": "main",
+    "describe": "3ccaa0e",
+    "dirty": false,
+    "status": []
+  },
+  "release": {
+    "version": "0.8.4",
+    "changelog": [
+      {
+        "version": "Unreleased",
+        "date": null,
+        "entries": []
+      },
+      {
+        "version": "0.8.4",
+        "date": "2026-09-23",
+        "entries": [
+          {
+            "text": "Reuse overlapping particle vertex uploads and reduce guard-search overhead in large Contra battles",
+            "links": [
+              {
+                "number": 380,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/380"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.8.3",
+        "date": "2026-09-13",
+        "entries": [
+          {
+            "text": "Restore complete launcher browser verification for current video tooltips, analytics consent, and desktop shortcuts",
+            "links": [
+              {
+                "number": 374,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/374"
+              }
+            ]
+          },
+          {
+            "text": "Set version 0.8.3 and record its release inventory",
+            "links": [
+              {
+                "number": 376,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/376"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.8.2",
+        "date": "2026-09-13",
+        "entries": [
+          {
+            "text": "Keep the engine worker's JavaScript and WebAssembly on the same runtime version to prevent launch failures after an update",
+            "links": [
+              {
+                "number": 372,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/372"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.8.1",
+        "date": "2026-09-13",
+        "entries": [
+          {
+            "text": "Reduce spatial-query, text-rendering, and draw-queue overhead, repair worker frame flushing, and adjust frame pacing; late-game regressions remain and locked 60 FPS is not achieved",
+            "links": [
+              {
+                "number": 367,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/367"
+              }
+            ]
+          },
+          {
+            "text": "Set version 0.8.1 and complete its release inventory",
+            "links": [
+              {
+                "number": 369,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/369"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.8.0",
+        "date": "2026-09-13",
+        "entries": [
+          {
+            "text": "Index vertex-array cache entries by buffer offset to reduce late-match renderer lookup costs",
+            "links": [
+              {
+                "number": 345,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/345"
+              }
+            ]
+          },
+          {
+            "text": "Reduce midgame AI cleanup and spatial-search costs, batch radar pixel updates, and avoid temporary shadow index uploads",
+            "links": [
+              {
+                "number": 365,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/365"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.7.1",
+        "date": "2026-09-03",
+        "entries": [
+          {
+            "text": "Cache enabled dynamic lights per render pass to cut late-match scene-render CPU cost",
+            "links": [
+              {
+                "number": 347,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/347"
+              }
+            ]
+          },
+          {
+            "text": "Fix road shroud composition",
+            "links": [
+              {
+                "number": 348,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/348"
+              }
+            ]
+          },
+          {
+            "text": "Use saturating float-to-int conversions so NaN and out-of-range casts no longer abort the engine",
+            "links": [
+              {
+                "number": 354,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/354"
+              }
+            ]
+          },
+          {
+            "text": "Clamp the pathfinder fast open queue bucket index to stop out-of-bounds writes on very long paths",
+            "links": [
+              {
+                "number": 355,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/355"
+              }
+            ]
+          },
+          {
+            "text": "Scope the D3D8 executor point-sprite uniform gate and shader-pair cache per program",
+            "links": [
+              {
+                "number": 356,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/356"
+              }
+            ]
+          },
+          {
+            "text": "Detect Y-only water grid resolution changes",
+            "links": [
+              {
+                "number": 357,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/357"
+              }
+            ]
+          },
+          {
+            "text": "Override GameInfo::amIHost in LANGameInfo so LAN host detection works through GameInfo pointers",
+            "links": [
+              {
+                "number": 358,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/358"
+              }
+            ]
+          },
+          {
+            "text": "Skip script diagnostic name copies when no listener is installed",
+            "links": [
+              {
+                "number": 359,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/359"
+              }
+            ]
+          },
+          {
+            "text": "Set version 0.7.1 and complete its audited release inventory",
+            "links": [
+              {
+                "number": 361,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/361"
+              }
+            ]
+          },
+          {
+            "text": "Audit production dependencies in the CI setup action so advisories in development-only tooling no longer block every build",
+            "links": [
+              {
+                "number": 362,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/362"
+              }
+            ]
+          },
+          {
+            "text": "Complete the 0.7.1 inventory after the CI audit fix",
+            "links": [
+              {
+                "number": 363,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/363"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.7.0",
+        "date": "2026-07-26",
+        "entries": [
+          {
+            "text": "Refresh road vertex buffers after terrain lighting changes to prevent camera-dependent bright roads",
+            "links": [
+              {
+                "number": 329,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/329"
+              }
+            ]
+          },
+          {
+            "text": "Add a first-class custom map manager with configuration-isolated browser storage",
+            "links": [
+              {
+                "number": 330,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/330"
+              }
+            ]
+          },
+          {
+            "text": "Prevent late-game pathfinding freezes by separating persistent obstacle state from A* scratch records",
+            "links": [
+              {
+                "number": 328,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/328"
+              }
+            ]
+          },
+          {
+            "text": "Remove ShockWave battle stalls from D3D8 staging copies and terrain-flatten scans",
+            "links": [
+              {
+                "number": 332,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/332"
+              }
+            ]
+          },
+          {
+            "text": "Prevent map-loading crashes by keeping non-finite FPS telemetry valid JSON",
+            "links": [
+              {
+                "number": 337,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/337"
+              }
+            ]
+          },
+          {
+            "text": "Set version 0.7.0 and complete its audited release inventory",
+            "links": [
+              {
+                "number": 334,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/334"
+              }
+            ]
+          },
+          {
+            "text": "Complete the 0.7.0 inventory after the FPS telemetry crash fix",
+            "links": [
+              {
+                "number": 338,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/338"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.6.0",
+        "date": "2026-07-25",
+        "entries": [
+          {
+            "text": "Refresh the README and add deterministic agent codenames",
+            "links": [
+              {
+                "number": 300,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/300"
+              }
+            ]
+          },
+          {
+            "text": "Add native WebXR stereo rendering, spatial UI, tracked controls, comfort settings, and lifecycle coverage",
+            "links": [
+              {
+                "number": 261,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/261"
+              }
+            ]
+          },
+          {
+            "text": "Fix intermittent original game cursor rendering",
+            "links": [
+              {
+                "number": 301,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/301"
+              }
+            ]
+          },
+          {
+            "text": "Retain directional pathfinder cache results to reduce dense-battle stalls",
+            "links": [
+              {
+                "number": 303,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/303"
+              }
+            ]
+          },
+          {
+            "text": "Remember LLM commander selections across skirmish relaunches",
+            "links": [
+              {
+                "number": 306,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/306"
+              }
+            ]
+          },
+          {
+            "text": "Fix intermittent smoke and dust disappearance during sorted particle replay",
+            "links": [
+              {
+                "number": 307,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/307"
+              }
+            ]
+          },
+          {
+            "text": "Prevent black terrain during the post-load startup resize",
+            "links": [
+              {
+                "number": 305,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/305"
+              }
+            ]
+          },
+          {
+            "text": "Make touch map navigation natural with one-finger panning",
+            "links": [
+              {
+                "number": 302,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/302"
+              }
+            ]
+          },
+          {
+            "text": "Move experimental VR settings behind an explicit warning",
+            "links": [
+              {
+                "number": 309,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/309"
+              }
+            ]
+          },
+          {
+            "text": "Fix automatic GLA worker supply assignment",
+            "links": [
+              {
+                "number": 310,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/310"
+              }
+            ]
+          },
+          {
+            "text": "Redesign D3D8 draw submission for materially faster Raspberry Pi 4 rendering",
+            "links": [
+              {
+                "number": 314,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/314"
+              }
+            ]
+          },
+          {
+            "text": "Fix D3D8 texture-coordinate precision and terrain shroud fidelity",
+            "links": [
+              {
+                "number": 316,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/316"
+              }
+            ]
+          },
+          {
+            "text": "Preserve lit multipass depth across optimized vertex transforms",
+            "links": [
+              {
+                "number": 317,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/317"
+              }
+            ]
+          },
+          {
+            "text": "Make cross-program vertex positions invariant for exact-depth material passes",
+            "links": [
+              {
+                "number": 318,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/318"
+              }
+            ]
+          },
+          {
+            "text": "Set version 0.6.0 and complete its audited release inventory",
+            "links": [
+              {
+                "number": 320,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/320"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.5.0",
+        "date": "2026-07-19",
+        "entries": [
+          {
+            "text": "Cache D3D8 transform uniforms per program across shader switches",
+            "links": [
+              {
+                "number": 258,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/258"
+              }
+            ]
+          },
+          {
+            "text": "Skip unused PartitionManager distance-vector work",
+            "links": [
+              {
+                "number": 262,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/262"
+              }
+            ]
+          },
+          {
+            "text": "Inline hot Thing template and KindOf queries",
+            "links": [
+              {
+                "number": 264,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/264"
+              }
+            ]
+          },
+          {
+            "text": "Cache bounded player relationship lookups",
+            "links": [
+              {
+                "number": 267,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/267"
+              }
+            ]
+          },
+          {
+            "text": "Optimize zero-mask and sparse weapon bonus hot paths",
+            "links": [
+              {
+                "number": 270,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/270"
+              }
+            ]
+          },
+          {
+            "text": "Inline hot GeometryInfo height and center queries",
+            "links": [
+              {
+                "number": 274,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/274"
+              }
+            ]
+          },
+          {
+            "text": "Avoid redundant terrain extra-blend sampling",
+            "links": [
+              {
+                "number": 278,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/278"
+              }
+            ]
+          },
+          {
+            "text": "Reuse AIGroup path buffers across group members",
+            "links": [
+              {
+                "number": 279,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/279"
+              }
+            ]
+          },
+          {
+            "text": "Inline hot WorldHeightMap flip and cliff queries",
+            "links": [
+              {
+                "number": 280,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/280"
+              }
+            ]
+          },
+          {
+            "text": "Inline hot PlayerList indexed lookups",
+            "links": [
+              {
+                "number": 283,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/283"
+              }
+            ]
+          },
+          {
+            "text": "Fix Contra X rider-template startup crashes caused by empty slots",
+            "links": [
+              {
+                "number": 290,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/290"
+              }
+            ]
+          },
+          {
+            "text": "Restore authentic right-drag sensitivity and browser edge scrolling",
+            "links": [
+              {
+                "number": 291,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/291"
+              }
+            ]
+          },
+          {
+            "text": "Set version 0.5.0 and complete its audited release inventory",
+            "links": [
+              {
+                "number": 293,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/293"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.4.0",
+        "date": "2026-07-19",
+        "entries": [
+          {
+            "text": "Remember Remote Agent settings and add an authenticated pre-launch connection test",
+            "links": [
+              {
+                "number": 121,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/121"
+              }
+            ]
+          },
+          {
+            "text": "Connect AgentBridge directly over encrypted WebRTC DataChannels",
+            "links": [
+              {
+                "number": 127,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/127"
+              }
+            ]
+          },
+          {
+            "text": "Make the launcher desktop usable on phone-sized portrait and landscape viewports",
+            "links": [
+              {
+                "number": 130,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/130"
+              }
+            ]
+          },
+          {
+            "text": "Add direct two-finger mobile map gestures and preserve the live device aspect ratio",
+            "links": [
+              {
+                "number": 134,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/134"
+              }
+            ]
+          },
+          {
+            "text": "Fix DXT1 CPU-fallback startup when S3TC texture support is unavailable",
+            "links": [
+              {
+                "number": 133,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/133"
+              }
+            ]
+          },
+          {
+            "text": "Keep smoke particles visible when water reflections render before the main scene",
+            "links": [
+              {
+                "number": 136,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/136"
+              }
+            ]
+          },
+          {
+            "text": "Correct DXT3 and DXT5 CPU-fallback alpha and color decoding",
+            "links": [
+              {
+                "number": 138,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/138"
+              }
+            ]
+          },
+          {
+            "text": "Fall back to exclusive OPFS access when Safari rejects read-only sync handles",
+            "links": [
+              {
+                "number": 123,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/123"
+              }
+            ]
+          },
+          {
+            "text": "Wait for the relaunched Exit window before the threaded play gate clicks it",
+            "links": [
+              {
+                "number": 139,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/139"
+              }
+            ]
+          },
+          {
+            "text": "Retarget the GameEngine startup-order verifier to stepped initialization",
+            "links": [
+              {
+                "number": 141,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/141"
+              }
+            ]
+          },
+          {
+            "text": "Bound BIG directory validation allocation growth while preserving archive checks",
+            "links": [
+              {
+                "number": 143,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/143"
+              }
+            ]
+          },
+          {
+            "text": "Retarget the GameLogic new-game verifier to stepped map loading",
+            "links": [
+              {
+                "number": 145,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/145"
+              }
+            ]
+          },
+          {
+            "text": "Avoid Durable Object storage writes while hardening hybrid Trystero discovery",
+            "links": [
+              {
+                "number": 214,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/214"
+              }
+            ]
+          },
+          {
+            "text": "Restore real WW3D and browser-D3D8 linkage in the GameLogic runtime smoke",
+            "links": [
+              {
+                "number": 146,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/146"
+              }
+            ]
+          },
+          {
+            "text": "Repair the launcher Bink browser smoke with a valid test-owned fixture",
+            "links": [
+              {
+                "number": 147,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/147"
+              }
+            ]
+          },
+          {
+            "text": "Parallelize launcher folder metadata reads with stable bounded concurrency",
+            "links": [
+              {
+                "number": 149,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/149"
+              }
+            ]
+          },
+          {
+            "text": "Preserve the ParticleInfo dynamic type when particle-system merging fails",
+            "links": [
+              {
+                "number": 151,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/151"
+              }
+            ]
+          },
+          {
+            "text": "Prevent Miles audio cleanup loops from stalling on null entries",
+            "links": [
+              {
+                "number": 153,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/153"
+              }
+            ]
+          },
+          {
+            "text": "Resolve extensionless files and dotted directories by path separators",
+            "links": [
+              {
+                "number": 155,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/155"
+              }
+            ]
+          },
+          {
+            "text": "Bound missile garrison-kill iteration by the actual occupant list",
+            "links": [
+              {
+                "number": 158,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/158"
+              }
+            ]
+          },
+          {
+            "text": "Make oriented-box inequality the logical complement of equality",
+            "links": [
+              {
+                "number": 160,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/160"
+              }
+            ]
+          },
+          {
+            "text": "Restore script condition-team context after subroutine calls",
+            "links": [
+              {
+                "number": 162,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/162"
+              }
+            ]
+          },
+          {
+            "text": "Preserve cardinal spline bookkeeping through polymorphic key insertion",
+            "links": [
+              {
+                "number": 164,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/164"
+              }
+            ]
+          },
+          {
+            "text": "Remove undefined behavior from WWMath floor conversion",
+            "links": [
+              {
+                "number": 166,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/166"
+              }
+            ]
+          },
+          {
+            "text": "Restore SimpleSceneClass scene-ID dispatch through const base pointers",
+            "links": [
+              {
+                "number": 169,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/169"
+              }
+            ]
+          },
+          {
+            "text": "Restore AI state-machine exit cleanup callbacks",
+            "links": [
+              {
+                "number": 173,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/173"
+              }
+            ]
+          },
+          {
+            "text": "Fully initialize FileInfo outputs before filesystem lookup",
+            "links": [
+              {
+                "number": 175,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/175"
+              }
+            ]
+          },
+          {
+            "text": "Build scripted shroud masks from every human player",
+            "links": [
+              {
+                "number": 177,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/177"
+              }
+            ]
+          },
+          {
+            "text": "Reject unknown WND gadget types without returning an indeterminate window",
+            "links": [
+              {
+                "number": 179,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/179"
+              }
+            ]
+          },
+          {
+            "text": "Make saturated network-diagnostics retention amortized constant time",
+            "links": [
+              {
+                "number": 181,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/181"
+              }
+            ]
+          },
+          {
+            "text": "Parse WebpageURL definitions safely without a browser subsystem",
+            "links": [
+              {
+                "number": 183,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/183"
+              }
+            ]
+          },
+          {
+            "text": "Make saturated issue-recorder event retention amortized constant time",
+            "links": [
+              {
+                "number": 185,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/185"
+              }
+            ]
+          },
+          {
+            "text": "Initialize zero-radius EMP and leaflet attack iteration safely",
+            "links": [
+              {
+                "number": 187,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/187"
+              }
+            ]
+          },
+          {
+            "text": "Initialize rider-stealth fallbacks when a rider has no stealth module",
+            "links": [
+              {
+                "number": 190,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/190"
+              }
+            ]
+          },
+          {
+            "text": "Give UseRiderStealth an explicit disabled module-data default",
+            "links": [
+              {
+                "number": 191,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/191"
+              }
+            ]
+          },
+          {
+            "text": "Cancel pending partition updates when partition data detaches",
+            "links": [
+              {
+                "number": 193,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/193"
+              }
+            ]
+          },
+          {
+            "text": "Match GameSpy thread string-array allocation and deletion",
+            "links": [
+              {
+                "number": 195,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/195"
+              }
+            ]
+          },
+          {
+            "text": "Keep the ThingTemplate Body discriminator outside ModuleType",
+            "links": [
+              {
+                "number": 197,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/197"
+              }
+            ]
+          },
+          {
+            "text": "Use an in-range sentinel for old script-condition migration",
+            "links": [
+              {
+                "number": 199,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/199"
+              }
+            ]
+          },
+          {
+            "text": "Recognize Chinook combat-drop states through their raw state IDs",
+            "links": [
+              {
+                "number": 201,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/201"
+              }
+            ]
+          },
+          {
+            "text": "Format localized crash reasons safely in the narrow crash log",
+            "links": [
+              {
+                "number": 203,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/203"
+              }
+            ]
+          },
+          {
+            "text": "Validate flight-deck runway layouts before indexing fixed storage",
+            "links": [
+              {
+                "number": 205,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/205"
+              }
+            ]
+          },
+          {
+            "text": "Require scripted garrison targets to be structures",
+            "links": [
+              {
+                "number": 207,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/207"
+              }
+            ]
+          },
+          {
+            "text": "Reject non-positive cached-file read sizes without moving the stream",
+            "links": [
+              {
+                "number": 209,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/209"
+              }
+            ]
+          },
+          {
+            "text": "Match array allocation and deletion in the online login menu",
+            "links": [
+              {
+                "number": 215,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/215"
+              }
+            ]
+          },
+          {
+            "text": "Match terrain-background index-array allocation and deletion",
+            "links": [
+              {
+                "number": 217,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/217"
+              }
+            ]
+          },
+          {
+            "text": "Sort compatible GameSpy lobby games before CRC mismatches",
+            "links": [
+              {
+                "number": 219,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/219"
+              }
+            ]
+          },
+          {
+            "text": "Return the discovered dozer command set from AcademyStats object iteration",
+            "links": [
+              {
+                "number": 221,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/221"
+              }
+            ]
+          },
+          {
+            "text": "Re-enter guard outer states after save loading",
+            "links": [
+              {
+                "number": 223,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/223"
+              }
+            ]
+          },
+          {
+            "text": "Reject oversized particle-cannon outer-node counts during INI parsing",
+            "links": [
+              {
+                "number": 225,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/225"
+              }
+            ]
+          },
+          {
+            "text": "Smooth large-skirmish replay stalls and prevent Worker supply-state re-entry loops",
+            "links": [
+              {
+                "number": 213,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/213"
+              }
+            ]
+          },
+          {
+            "text": "Preserve successfully disarmed mines, booby traps, and demo traps",
+            "links": [
+              {
+                "number": 228,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/228"
+              }
+            ]
+          },
+          {
+            "text": "Play every configured clip in AC_ALL audio events",
+            "links": [
+              {
+                "number": 230,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/230"
+              }
+            ]
+          },
+          {
+            "text": "Apply authored rally offsets to both AI building paths",
+            "links": [
+              {
+                "number": 232,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/232"
+              }
+            ]
+          },
+          {
+            "text": "Reject CAMEO_FLASH actions when their command button is unavailable",
+            "links": [
+              {
+                "number": 235,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/235"
+              }
+            ]
+          },
+          {
+            "text": "Correct Vector3 quick-length component ordering",
+            "links": [
+              {
+                "number": 236,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/236"
+              }
+            ]
+          },
+          {
+            "text": "Reject invalid ENEMY_SIGHTED relationships before partition filtering",
+            "links": [
+              {
+                "number": 239,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/239"
+              }
+            ]
+          },
+          {
+            "text": "Set version 0.4.0 and complete its audited release inventory",
+            "links": [
+              {
+                "number": 244,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/244"
+              }
+            ]
+          },
+          {
+            "text": "Clear focus-latched selection modes so unit clicks and friendly transport commands recover",
+            "links": [
+              {
+                "number": 249,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/249"
+              }
+            ]
+          },
+          {
+            "text": "Keep the main-scene smoke and dust request intact when water reflections flush first",
+            "links": [
+              {
+                "number": 257,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/257"
+              }
+            ]
+          },
+          {
+            "text": "Finalize the 0.4.0 release inventory after the last integrated fixes",
+            "links": [
+              {
+                "number": 269,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/269"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.3.0",
+        "date": "2026-07-16",
+        "entries": [
+          {
+            "text": "Prevent terrain scorch depth bias from leaking into shroud and results rendering",
+            "links": [
+              {
+                "number": 114,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/114"
+              }
+            ]
+          },
+          {
+            "text": "Fix biased skirmish random-faction assignments while preserving deterministic RNG progression",
+            "links": [
+              {
+                "number": 109,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/109"
+              }
+            ]
+          },
+          {
+            "text": "Add complete mobile touch controls, virtual keyboard integration, and gesture coverage",
+            "links": [
+              {
+                "number": 110,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/110"
+              }
+            ]
+          },
+          {
+            "text": "Expand terrain rendering to cover ultrawide high-zoom and near-vertical camera views",
+            "links": [
+              {
+                "number": 113,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/113"
+              }
+            ]
+          },
+          {
+            "text": "Set version 0.3.0 and complete its audited release inventory",
+            "links": [
+              {
+                "number": 116,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/116"
+              }
+            ]
+          },
+          {
+            "text": "Reduce automatic iPad rendering to the CSS pixel grid to lower GPU pressure",
+            "links": [
+              {
+                "number": 111,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/111"
+              }
+            ]
+          },
+          {
+            "text": "Add native Anonymous and Ranked multiplayer UI with LAN status and reconnect recovery",
+            "links": [
+              {
+                "number": 112,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/112"
+              }
+            ]
+          },
+          {
+            "text": "Complete the 0.3.0 inventory after the final green integrations",
+            "links": [
+              {
+                "number": 117,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/117"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.2.0",
+        "date": "2026-07-15",
+        "entries": [
+          {
+            "text": "Replace Arcade with ten themed Windows XP game apps, including five networked Internet games",
+            "links": [
+              {
+                "number": 55,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/55"
+              }
+            ]
+          },
+          {
+            "text": "Add drag-and-drop, touch controls, animations, difficulty settings, and synthesized audio across the XP games",
+            "links": [
+              {
+                "number": 55,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/55"
+              }
+            ]
+          },
+          {
+            "text": "Fix stale sorted particle shader replay state that intermittently hid smoke and dust effects",
+            "links": [
+              {
+                "number": 65,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/65"
+              }
+            ]
+          },
+          {
+            "text": "Replace the hosted FFmpeg runtime with a lazy 104 KiB direct classic-Bink decoder",
+            "links": [
+              {
+                "number": 70,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/70"
+              }
+            ]
+          },
+          {
+            "text": "Add bounded Bink video, audio, and seek playback with integrity, size, source, and deployment guards",
+            "links": [
+              {
+                "number": 70,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/70"
+              }
+            ]
+          },
+          {
+            "text": "Restore original animated Zero Hour cursors through the threaded browser runtime with a system-pointer setting",
+            "links": [
+              {
+                "number": 74,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/74"
+              }
+            ]
+          },
+          {
+            "text": "Preserve derived cursor packs through browser installation and encrypted device transfer",
+            "links": [
+              {
+                "number": 74,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/74"
+              }
+            ]
+          },
+          {
+            "text": "Add a failure-only Windows-style crash dialog and downloadable diagnostics reports with no steady-state reporter work",
+            "links": [
+              {
+                "number": 69,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/69"
+              }
+            ]
+          },
+          {
+            "text": "Add a browser mod manager with ordered content identities and original-engine -mod mounting",
+            "links": [
+              {
+                "number": 73,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/73"
+              }
+            ]
+          },
+          {
+            "text": "Import practical BIG, folder, ZIP, 7z, RAR, NSIS, nested, and Clickteam mod distributions without executing native payloads",
+            "links": [
+              {
+                "number": 73,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/73"
+              }
+            ]
+          },
+          {
+            "text": "Isolate saves, replays, device transfers, and multiplayer by exact mod composition and transfer installed mod libraries",
+            "links": [
+              {
+                "number": 73,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/73"
+              }
+            ]
+          },
+          {
+            "text": "Base feature work on dev and require completed agent changes to be handed off through signed pull requests",
+            "links": [
+              {
+                "number": 72,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/72"
+              }
+            ]
+          },
+          {
+            "text": "Set version 0.2.0 and seed its release inventory",
+            "links": [
+              {
+                "number": 77,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/77"
+              }
+            ]
+          },
+          {
+            "text": "Select the launcher-compatible Contra X Beta 2 archive set so its custom UI renders correctly",
+            "links": [
+              {
+                "number": 84,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/84"
+              }
+            ]
+          },
+          {
+            "text": "Generate evidence-backed public project documentation and crawler discovery resources from one canonical record",
+            "links": [
+              {
+                "number": 82,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/82"
+              }
+            ]
+          },
+          {
+            "text": "Keep browser LAN diagnostics read-only so observation cannot desynchronize multiplayer lockstep",
+            "links": [
+              {
+                "number": 90,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/90"
+              }
+            ]
+          },
+          {
+            "text": "Avoid synchronous WebGL buffer upload stalls by rotating in-flight dynamic buffer ranges",
+            "links": [
+              {
+                "number": 98,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/98"
+              }
+            ]
+          },
+          {
+            "text": "Stream large issue-dump serialization in bounded chunks without exceeding JavaScript string limits",
+            "links": [
+              {
+                "number": 100,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/100"
+              }
+            ]
+          },
+          {
+            "text": "Bound retired WebGL streaming buffers and invalidate dependent vertex arrays before deletion",
+            "links": [
+              {
+                "number": 101,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/101"
+              }
+            ]
+          },
+          {
+            "text": "Preserve unrelated cached vertex arrays when transient renderer buffers are released",
+            "links": [
+              {
+                "number": 103,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/103"
+              }
+            ]
+          },
+          {
+            "text": "Add configurable autonomous LLM commanders with exclusive strategy ownership and durable session evidence",
+            "links": [
+              {
+                "number": 95,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/95"
+              }
+            ]
+          },
+          {
+            "text": "Add an opt-in semantic remote-play API with global and camera-bound control, tactical events, and a Go bridge",
+            "links": [
+              {
+                "number": 94,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/94"
+              }
+            ]
+          },
+          {
+            "text": "Complete the audited 0.2.0 release inventory after the final integrated changes",
+            "links": [
+              {
+                "number": 105,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/105"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "version": "0.1.0",
+        "date": "2026-07-13",
+        "entries": [
+          {
+            "text": "Establish dev as the integration branch and preserve trusted PR previews",
+            "links": [
+              {
+                "number": 45,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/45"
+              }
+            ]
+          },
+          {
+            "text": "Add the release skill with versioned promotions and issue-closure accounting",
+            "links": [
+              {
+                "number": 45,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/45"
+              }
+            ]
+          },
+          {
+            "text": "Add canonical VERSION and linked CHANGELOG.md release metadata",
+            "links": [
+              {
+                "number": 45,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/45"
+              }
+            ]
+          },
+          {
+            "text": "Record the exact build commit in local, deployed, and issue-dump metadata",
+            "links": [
+              {
+                "number": 45,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/45"
+              }
+            ]
+          },
+          {
+            "text": "Show the version, build commit link, and release notes in the fake Windows UI",
+            "links": [
+              {
+                "number": 45,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/45"
+              }
+            ]
+          },
+          {
+            "text": "Keep explosion scorch decals stable above terrain",
+            "links": [
+              {
+                "number": 32,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/32"
+              }
+            ]
+          },
+          {
+            "text": "Restore river water after Shader Model 1 program switches",
+            "links": [
+              {
+                "number": 33,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/33"
+              }
+            ]
+          },
+          {
+            "text": "Render Tech Reinforcement Pad towers without over-broad alpha cutout",
+            "links": [
+              {
+                "number": 42,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/42"
+              }
+            ]
+          },
+          {
+            "text": "Flush threaded renderer batches per frame to prevent bright terrain blocks",
+            "links": [
+              {
+                "number": 41,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/41"
+              }
+            ]
+          },
+          {
+            "text": "Restore authorized game audio after returning to the browser tab",
+            "links": [
+              {
+                "number": 38,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/38"
+              }
+            ]
+          },
+          {
+            "text": "Add a persistent configurable camera zoom setting up to 500 units",
+            "links": [
+              {
+                "number": 44,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/44"
+              }
+            ]
+          },
+          {
+            "text": "Persist, import, export, and play original replay files",
+            "links": [
+              {
+                "number": 39,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/39"
+              }
+            ]
+          },
+          {
+            "text": "Deploy accepted dev builds through a trusted Cloudflare handoff",
+            "links": [
+              {
+                "number": 49,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/49"
+              }
+            ]
+          },
+          {
+            "text": "Complete original browser save, load, overwrite, delete, and relaunch flows",
+            "links": [
+              {
+                "number": 46,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/46"
+              }
+            ]
+          },
+          {
+            "text": "Shut down and relaunch the runtime after the original engine exits",
+            "links": [
+              {
+                "number": 31,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/31"
+              }
+            ]
+          },
+          {
+            "text": "Add encrypted multi-device game file transfer with staged installation",
+            "links": [
+              {
+                "number": 50,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/50"
+              }
+            ]
+          },
+          {
+            "text": "Synchronize agent GitHub identity rules from main back into dev",
+            "links": [
+              {
+                "number": 52,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/52"
+              }
+            ]
+          },
+          {
+            "text": "Finalize version 0.1.0 and its complete release inventory",
+            "links": [
+              {
+                "number": 53,
+                "url": "https://github.com/Agusx1211/NewShoes/pull/53"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

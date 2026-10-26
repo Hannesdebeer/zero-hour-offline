@@ -1,0 +1,17 @@
+{
+  "schema": "cnc-zh-bink-decoder-runtime/v1",
+  "abiVersion": 1,
+  "wasmFile": "bink-decoder.wasm",
+  "wasmBytes": 104191,
+  "wasmSha256": "f270277964c3136cab3dca5e0fccfa5448c71fa06cb94e26d37e55ae1d3851eb",
+  "maxWasmBytes": 131072,
+  "supportedSignatures": [
+    "BIKb",
+    "BIKf",
+    "BIKg",
+    "BIKh",
+    "BIKi",
+    "BIKk"
+  ],
+  "upstreamRevision": "a9a01212fe7104417246ff6ca922319f5f3f859b"
+}

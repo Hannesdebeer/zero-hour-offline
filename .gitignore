@@ -1,0 +1,14 @@
+# Never commit private assets or local test material.
+*.big
+*.exe
+*.dll
+*.bin
+*.iso
+*.rar
+.env*
+.DS_Store
+__test/
+testing/
+evidence/
+recovered-game-data/
+vm-pilot/

@@ -1,0 +1,378 @@
+# Project New Shoes: complete project guide
+
+Canonical site: https://newshoes.gg/
+
+Source: https://github.com/Agusx1211/NewShoes
+
+Current tracker: https://github.com/Agusx1211/NewShoes/issues
+
+Facts reviewed: 2026-07-25. Review deadline: 2026-10-12. Canonical machine-readable facts: https://newshoes.gg/project-info.json
+
+## At a glance
+
+Project New Shoes is a browser port of the original Command & Conquer: Generals and Command & Conquer: Generals Zero Hour C++ engine. The real engine is compiled to WebAssembly, with browser implementations at its operating-system boundaries.
+
+Project New Shoes is not a remake, clone, source port with replacement gameplay, video stream, or emulator running the Windows executable. The original engine owns the simulation, AI, rules, maps, scripts, UI, input semantics, renderer, audio requests, movie presentation, and lockstep multiplayer protocol.
+
+Zero Hour is the current playable target. Generals data is required because Zero Hour depends on it, but a separate vanilla Generals launch option is not currently exposed.
+
+Project New Shoes is independent modified software. It is not affiliated with, endorsed by, or supported by Electronic Arts. The repository and browser-port modifications are distributed under GNU GPL version 3 with the additional section 7 terms in the project license. The site does not include retail game archives, disc images, maps, textures, models, music, speech, or movies. A player must supply data from a copy they own.
+
+## What a player can do
+
+### Install and launch a local copy
+
+**Status: Supported.** The launcher imports a complete English Generals and Zero Hour installation or the complete original media set without uploading retail files.
+
+The browser launcher can inspect either a complete English Generals and Zero Hour installation or the complete original Generals and Zero Hour disc-image or media set. Folder and media selection always require an explicit action by the person using the browser.
+
+The launcher reads and validates required files locally. It can parse supported ISO and disc-image layouts, extract required Cabinet members, and install the needed BIG archives into the browser's Origin Private File System (OPFS). The installed game remains associated with that browser profile and site origin.
+
+After installation, the browser desktop exposes the Zero Hour launcher, game library, settings, files, mods, save and replay management, device transfer, diagnostics, project information, and a small collection of auxiliary browser games.
+
+On phones, the launcher uses portrait- and short-landscape layouts with touch-sized window controls, a readable Start app drawer, reachable desktop shortcuts, scrollable task switching, dynamic viewport sizing, and safe-area-aware edges. Larger screens retain the desktop window-management layout.
+
+Evidence: [WebAssembly/harness/launcher-asset-manager.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/launcher-asset-manager.mjs), [WebAssembly/harness/opfs_realm_files.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/opfs_realm_files.mjs), [WebAssembly/harness/opfs_realm_files_unit.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/opfs_realm_files_unit.mjs), [WebAssembly/harness/game-data-store.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/game-data-store.mjs), [WebAssembly/harness/startup_vertical_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/startup_vertical_smoke.mjs), [WebAssembly/harness/launcher_mobile_browser_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/launcher_mobile_browser_smoke.mjs). Reviewed 2026-07-17.
+
+### Play Zero Hour
+
+**Status: Supported.** The original Zero Hour shell boots and playable skirmishes run against the original AI through the engine's real simulation and input paths.
+
+Players use the original menus, mouse, keyboard, touch controls, selection, building, production, movement, camera, and combat behavior. This is the actual C++ engine compiled for WebAssembly rather than reimplemented gameplay.
+
+Midgame optimizations reduce repeated AI cleanup and spatial-search work while retaining the original simulation update order, targeting order, and distance rules. Guard searches skip irrelevant allied cells, and queued rendering reuses overlapping particle vertex data without changing effects or draw order. Frame rate remains dependent on battle size, browser, and hardware.
+
+Mouse camera scrolling preserves the original right-drag default speed across supported render resolutions. The original Options menu Scroll Speed control adjusts right-drag, keyboard, and edge-scrolling sensitivity, and moving the cursor to the game canvas edge scrolls the tactical view.
+
+All official multiplayer maps have been exercised to rendered skirmish state. Campaign and Generals Challenge use the real engine and are in active validation; mission breadth, cutscenes, win and loss flows, and edge cases continue to receive coverage.
+
+The browser persists the original engine's last skirmish map, faction, slots, teams, starting cash, superweapon restriction, and game speed. Local LLM commander profile selections are remembered separately from the legacy LAN-compatible slot string; if a selected profile is later deleted, its classic AI fallback remains usable.
+
+This is a playable development product, not a claim that every original flow and every browser combination is already perfect. Current issues and deployed build metadata should be consulted for narrower compatibility claims.
+
+Evidence: [GeneralsMD/Code/GameEngine/Source/GameClient/MessageStream/LookAtXlat.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameClient/MessageStream/LookAtXlat.cpp), [GeneralsMD/Code/GameEngine/Source/GameLogic/AI/AI.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameLogic/AI/AI.cpp), [GeneralsMD/Code/GameEngine/Source/GameLogic/AI/AIGuard.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameLogic/AI/AIGuard.cpp), [GeneralsMD/Code/GameEngine/Source/GameLogic/Object/PartitionManager.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameLogic/Object/PartitionManager.cpp), [GeneralsMD/Code/GameEngine/Source/GameLogic/System/GameLogic.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameLogic/System/GameLogic.cpp), [WebAssembly/tests/partition_query_index_smoke.cpp](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/tests/partition_query_index_smoke.cpp), [WebAssembly/tests/partition_detach_dirty_smoke.cpp](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/tests/partition_detach_dirty_smoke.cpp), [docs/shockwave-replay-performance.md](https://github.com/Agusx1211/NewShoes/blob/main/docs/shockwave-replay-performance.md), [docs/contra-replay-performance.md](https://github.com/Agusx1211/NewShoes/blob/main/docs/contra-replay-performance.md), [WebAssembly/harness/d3d8_executor.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/d3d8_executor.mjs), [WebAssembly/harness/d3d8_sm1_transform_switch_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/d3d8_sm1_transform_switch_smoke.mjs), [WebAssembly/tests/sleepy_update_removal_smoke.cpp](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/tests/sleepy_update_removal_smoke.cpp), [WebAssembly/harness/bridge.js](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/bridge.js), [WebAssembly/harness/engine_realm_boot.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/engine_realm_boot.mjs), [WebAssembly/harness/camera_scroll_runtime_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/camera_scroll_runtime_smoke.mjs), [WebAssembly/harness/skirmish_start_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/skirmish_start_smoke.mjs), [GeneralsMD/Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/SkirmishGameOptionsMenu.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/SkirmishGameOptionsMenu.cpp), [WebAssembly/harness/skirmish_preferences_persistence_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/skirmish_preferences_persistence_smoke.mjs), [WebAssembly/harness/threaded_play_gate.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/threaded_play_gate.mjs), [WebAssembly/harness/shellmap_real_init_gate.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/shellmap_real_init_gate.mjs), [GeneralsMD/Code/GameEngineDevice/Source/W3DDevice/GameClient/W3DDisplay.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngineDevice/Source/W3DDevice/GameClient/W3DDisplay.cpp), [WebAssembly/src/wasm_real_engine_init.cpp](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/src/wasm_real_engine_init.cpp), [WebAssembly/tools/verify_finite_frame_json.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/tools/verify_finite_frame_json.mjs). Reviewed 2026-09-23.
+
+### Play on a touch screen
+
+**Status: In active validation.** Phone and tablet layouts map selection, contextual orders, direct map-like camera navigation, hotkeys, and text entry onto touch controls that feed the engine's original input paths.
+
+A one-finger tap selects or activates, while a one-finger drag directly grabs and moves an unobstructed tactical-map surface without rotating it. The engine reports live UI drag blockers so sliders, lists, minimaps, command controls, and shell screens retain their original left-drag behavior. Moving two fingers together provides marquee selection, pinching two fingers zooms, and twisting three fingers rotates; stationary or released fingers do not leave camera velocity active. A hold, stationary two-finger tap, or armed Order button provides a right click. Explicit Cancel, text, help, camera, modifier, control-group, function, navigation, punctuation, and numeric-keypad controls make keyboard-only actions reachable.
+
+Visible original-engine text-entry rectangles are relayed to the browser so tapping one can open the device keyboard during the touch event. Browsers with the Virtual Keyboard API use overlay mode; other mobile browsers keep the game canvas at its pre-keyboard geometry and move only the text proxy above the visible keyboard.
+
+The controls are designed for phone and tablet play, including iPhone- and iPad-class portrait and landscape layouts. Automatic rendering preserves the live device aspect ratio and reduces both dimensions uniformly when DPR, GPU pixel budgets, or engine limits require a lower resolution. Touch recognition and mobile Chromium layouts have focused automated coverage; physical-device and Safari breadth remain in active validation. Landscape is recommended because the original Zero Hour interface was designed for a wide screen.
+
+Evidence: [WebAssembly/harness/touch-controls.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/touch-controls.mjs), [WebAssembly/harness/touch_controls_unit.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/touch_controls_unit.mjs), [WebAssembly/harness/touch_controls_browser_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/touch_controls_browser_smoke.mjs), [WebAssembly/harness/display-resolution.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/display-resolution.mjs), [WebAssembly/harness/display_resolution_unit.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/display_resolution_unit.mjs), [WebAssembly/harness/bridge.js](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/bridge.js), [GeneralsMD/Code/GameEngine/Source/GameClient/MessageStream/LookAtXlat.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameClient/MessageStream/LookAtXlat.cpp), [WebAssembly/src/wasm_port_entry.cpp](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/src/wasm_port_entry.cpp), [WebAssembly/src/wasm_agent_api.cpp](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/src/wasm_agent_api.cpp). Reviewed 2026-07-20.
+
+### Connect a remote playing agent
+
+**Status: Experimental.** An optional authenticated bridge exposes human-accessible shell and match information plus semantic direct controls to a separately operated agent.
+
+Before launch, a person can open the Windows-style Remote Agent app, enable it, and stage the WebRTC URL, browser credential, session ID, and fixed Global or Camera play mode printed by a separately running Go bridge. The hosted HTTPS page and bridge connect outward through an encrypted peer-to-peer data channel; the project relay forwards only end-to-end-encrypted SDP/ICE signaling and never carries agent requests, responses, or gameplay data. The app remembers non-secret settings, offers explicit device-local browser-token storage, and can authenticate a connection test without registering a playable session. When disabled, the browser does not import the runtime adapter or create an agent socket, peer connection, polling loop, or reconnect timer.
+
+The bridge uses distinct random browser and REST credentials by default. Its authenticated REST API covers shell UI, HUD messages, fog-safe world, terrain and minimap observations, compact reusable capability dictionaries, bounded tactical event streams, and semantic selection, production, upgrade, special-power, construction, movement, combat, camera, and chat actions. Engine observation and actions retain the original simulation and input paths rather than replacing gameplay with a harness implementation.
+
+Global mode exposes information a human player could access across the map subject to radar, shroud, stealth, disguise, and other game rules. Camera mode additionally bounds observation and action targets to the tactical view while preserving select-then-pan interaction. The mode is fixed for the session. Independent completed Easy-mode wins under both policies verify full-match operation, but the interface does not prescribe strategy or guarantee that an agent will win.
+
+The browser credential is accepted only through explicit pre-launch configuration and stays in page memory by default. Remembering it in origin-local browser storage requires a separate device-local opt-in that can be turned off to erase the saved token. It is always omitted from URLs, public status, and issue dumps. An agent still cannot provide retail assets, select local files, or grant browser permissions.
+
+Evidence: [AgentBridge/README.md](https://github.com/Agusx1211/NewShoes/blob/main/AgentBridge/README.md), [AgentBridge/server_test.go](https://github.com/Agusx1211/NewShoes/blob/main/AgentBridge/server_test.go), [AgentBridge/webrtc.go](https://github.com/Agusx1211/NewShoes/blob/main/AgentBridge/webrtc.go), [WebAssembly/harness/agent-bridge-config.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/agent-bridge-config.mjs), [WebAssembly/harness/agent-webrtc-transport.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/agent-webrtc-transport.mjs), [WebAssembly/harness/agent_webrtc_e2e_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/agent_webrtc_e2e_smoke.mjs), [WebAssembly/harness/agent_bridge_browser_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/agent_bridge_browser_smoke.mjs), [WebAssembly/harness/agent_bridge_config_ui_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/agent_bridge_config_ui_smoke.mjs), [WebAssembly/src/wasm_agent_api.cpp](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/src/wasm_agent_api.cpp). Reviewed 2026-07-17.
+
+### Campaign and Generals Challenge
+
+**Status: In active validation.** These modes enter through the real engine and remain under active breadth, mission-flow, and cutscene validation.
+
+The relevant original menus, scripts, maps, AI, and mission systems are part of the same engine used for skirmish. Individual paths may work without implying complete coverage of every faction, mission, objective transition, movie, or ending.
+
+Agents and support answers should describe these modes as in active validation and check the live issue tracker before promising a specific mission or long-session outcome.
+
+Evidence: [PROJECT.md](https://github.com/Agusx1211/NewShoes/blob/main/PROJECT.md), [WebAssembly/harness/skirmish_start_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/skirmish_start_smoke.mjs). Reviewed 2026-07-14.
+
+### Configure LLM commanders
+
+**Status: Experimental.** Named OpenAI-compatible models can hold an exclusive strategy lease for a computer slot while the original engine executes bounded semantic production, force, mission, and tactical requests.
+
+The launcher's LLM AI Manager stores named commander profiles with an endpoint, model, API key, thinking effort, context size, strategic mandate, explicit tool adapter, planning interval, fallback policy, and hard routine-observation, tool-result, and recent-context budgets. It loads available models, offers a provider-reported context limit without overwriting an explicit manual value, and runs staged reachability, model, context, query, and exact tool-call diagnostics through the same native streaming request path used in a match. A saved profile appears as a computer-player choice in the original Skirmish and LAN setup screens.
+
+In skirmish, the LLM and classic strategic directors are mutually exclusive. The LLM lease disables automatic classic building, team, upgrade, skill, target, and mission selection while controller-neutral original-engine machinery continues accepted build-list placement, work orders, factory queues, team completion, scripts, pathfinding, combat, and deterministic game messages. Semantic tools set priorities, query legal build options, request structures, upgrades, and forces, explicitly evacuate contained forces through an advertised owned transport, garrison, or tunnel source, assign stable squads or the currently advertised unassigned commandable combat reserves to persistent missions, inspect jobs and bounded entities, and query bounded map regions. Combat-force and contact handle prefixes are accepted without case sensitivity. Builders and harvesters remain outside managed squad missions unless the model deliberately selects exact IDs through the low-level order tool. A retained classic fallback starts only after an explicit recorded ownership transfer.
+
+Routine observations contain compact strategic state and deltas, non-duplicated visible enemy mobile threats, numeric combat strength, engine-scored cumulative trades, owned-facility health, safe force composition and positions, explicit mission-handle eligibility, exact assigned and surviving mission membership, and bounded active or recent jobs and missions with their squad, target, elapsed time, unassigned reinforcements, and player-wide combat change since mission start. Currently observed executable non-production abilities expose their exact source, command, target requirement, and engine readiness without selecting their use or target for the model. A coarse session-local coverage grid remembers which player-visible map cells were actually seen recently, earlier, or never, so context compaction and maps that begin engine-explored do not erase the commander's scouting history. Visible enemy objectives include engine-derived roles and their semantic handles can be passed directly back as mission targets. Build queries include engine-derived combat roles, target domains, preferred target classes, damage types, and range. Fog loss is reported as an unconfirmed lost contact rather than destruction, while bounded read-only map queries resample the same persistent actual-visibility history into readable never-seen, stale, recent, and currently-visible rows without revealing fog or returning objects. Recovery rejects an unchanged exact failed call but does not blacklist its entire action type, and a relevant observed resource, catalog, force, objective, command, or production change permits a fresh engine attempt. Focused tools enforce deterministic filters, ordering, snapshot-bound cursors, and serialized token limits without slicing semantic records. Native tool-call deltas, reasoning and tool-call history, request timing, all provider attempts, model decisions, engine execution, low-level reactions, fallback transitions, and authoritative per-slot outcomes persist in the redacted IndexedDB session. The manager presents that evidence as a chronological transcript with readable state summaries, ordered calls paired with their results, timing and token metadata, expandable reasoning, and optional raw event data. Semantic checkpoints preserve a configured recent suffix and intact tool-call/result groups when context must be compacted. The separately selected structured adapter never activates automatically.
+
+Evidence: [WebAssembly/harness/llm-ai-manager-browser-smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/llm-ai-manager-browser-smoke.mjs), [WebAssembly/harness/llm-ai-match-smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/llm-ai-match-smoke.mjs), [WebAssembly/harness/llm-ai-game-runtime.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/llm-ai-game-runtime.mjs), [WebAssembly/harness/llm-ai-game-tools.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/llm-ai-game-tools.mjs), [WebAssembly/harness/llm-ai-strategy.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/llm-ai-strategy.mjs), [WebAssembly/src/wasm_agent_api.cpp](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/src/wasm_agent_api.cpp), [WebAssembly/src/wasm_real_engine_init.cpp](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/src/wasm_real_engine_init.cpp), [GeneralsMD/Code/GameEngine/Source/GameLogic/ScriptEngine/VictoryConditions.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameLogic/ScriptEngine/VictoryConditions.cpp). Reviewed 2026-07-15.
+
+### Graphics, audio, and movies
+
+**Status: In active validation.** WebGL2, Web Audio, and browser-side Bink integration carry the original engine's rendering, sound, and movie requests, with continuing fidelity and coverage work.
+
+The Direct3D 8-shaped renderer maps the original rendering path to WebGL2. The default enhanced tier translates shipped shader model 1.1 programs to GLSL ES, while a classic tier generates fixed-function-style shaders for comparison and fallback. Terrain, objects, UI, particles, effects, render targets, and common scenes work; fidelity and performance fixes continue.
+
+Radar blips share texture updates, shadow volumes avoid unnecessary temporary index uploads, and unchanged HUD text reuses its rendering resources. Buffer changes and texture releases retain queued draws that do not use the changed resource. These optimizations preserve draw order, resource lifetimes, text and radar pixels, shadow depth and stencil behavior, clipping, and visible flat shading.
+
+Engine-driven music, speech, streams, and two-dimensional and three-dimensional samples play through Web Audio. The mixer retains the engine's category and positional intent at the browser boundary.
+
+Original Bink movie ownership remains in the game path. Hosted builds use a focused on-device decoder for supported classic Bink content selected from the player's own files. Broader mission and playback coverage remains ongoing.
+
+Evidence: [WebAssembly/harness/shader_fidelity_probe.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/shader_fidelity_probe.mjs), [GeneralsMD/Code/GameEngineDevice/Source/W3DDevice/Common/System/W3DRadar.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngineDevice/Source/W3DDevice/Common/System/W3DRadar.cpp), [GeneralsMD/Code/GameEngineDevice/Source/W3DDevice/GameClient/W3DDisplayString.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngineDevice/Source/W3DDevice/GameClient/W3DDisplayString.cpp), [WebAssembly/harness/d3d8_executor.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/d3d8_executor.mjs), [WebAssembly/harness/d3d8_shadow_indices_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/d3d8_shadow_indices_smoke.mjs), [WebAssembly/harness/d3d8_dxt_cpu_fallback_unit.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/d3d8_dxt_cpu_fallback_unit.mjs), [WebAssembly/harness/d3d8_dxt_cpu_fallback_browser_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/d3d8_dxt_cpu_fallback_browser_smoke.mjs), [WebAssembly/harness/d3d8_sm1_transform_switch_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/d3d8_sm1_transform_switch_smoke.mjs), [WebAssembly/harness/threaded_frame_flush_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/threaded_frame_flush_smoke.mjs), [WebAssembly/harness/skirmish_start_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/skirmish_start_smoke.mjs), [WebAssembly/harness/terrain_culling_orientation_probe.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/terrain_culling_orientation_probe.mjs), [WebAssembly/harness/real_audio_event_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/real_audio_event_smoke.mjs), [WebAssembly/harness/bink_direct_decoder_browser_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/bink_direct_decoder_browser_smoke.mjs). Reviewed 2026-09-13.
+
+### Use and manage mods
+
+**Status: Supported.** The Mod Manager handles engine-data archives and common package containers while explicitly rejecting native components that WebAssembly cannot run.
+
+The Mod Manager accepts BIG archives, loose engine-data folders, and downloaded ZIP, 7z, RAR, NSIS, and Clickteam Install Creator packages. Installer packages are decoded as data and never executed. Native DLL or executable components cannot run in the WebAssembly engine and are reported as unsupported rather than silently treated as working.
+
+Players can enable multiple mods, choose archive options, and order them. Later archives and mods retain the engine's normal override precedence. Ordered content hashes produce an exact launch-configuration identity.
+
+Each identity gets isolated user data so saves and replays from vanilla or differently ordered mod sets do not leak into one another. Multiplayer discovery uses the same identity to keep incompatible peers apart. Individual mods can still rely on unsupported native code or engine assumptions, so package-format support is not a guarantee for every mod.
+
+Evidence: [WebAssembly/harness/mod-manager-ui.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/mod-manager-ui.mjs), [WebAssembly/harness/mod_manager_browser_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/mod_manager_browser_smoke.mjs), [WebAssembly/harness/mod_real_package_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/mod_real_package_smoke.mjs), [GeneralsMD/Code/GameEngine/Source/GameLogic/Object/Contain/RiderChangeContain.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameLogic/Object/Contain/RiderChangeContain.cpp), [WebAssembly/tools/verify_rider_change_contain_template_guard.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/tools/verify_rider_change_contain_template_guard.mjs), [GeneralsMD/Code/GameEngineDevice/Source/W3DDevice/GameClient/W3DDisplay.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngineDevice/Source/W3DDevice/GameClient/W3DDisplay.cpp), [WebAssembly/src/wasm_real_engine_init.cpp](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/src/wasm_real_engine_init.cpp), [WebAssembly/tools/verify_finite_frame_json.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/tools/verify_finite_frame_json.mjs). Reviewed 2026-07-26.
+
+### Install and manage custom maps
+
+**Status: Supported.** The Map Manager installs standard community map archives and folders into the original engine's configuration-isolated User Maps library.
+
+The browser desktop accepts ZIP, 7z, RAR, standalone MAP files, and selected folders using the standard MapName/MapName.map layout. Archives are inspected and extracted locally; map files are not uploaded.
+
+Imported maps are written as loose files under the active launch configuration's real Zero Hour user-data Maps directory. The manager lists and removes those folders and invalidates the original engine's generated MapCache.ini after changes, so the original User Maps discovery and loading path remains the owner of gameplay behavior.
+
+Map data is isolated with the exact vanilla or ordered-mod launch configuration. A map can still depend on a particular mod, contain invalid game data, or use native Windows code that cannot run in WebAssembly; package recognition does not guarantee that every community map is compatible.
+
+Evidence: [WebAssembly/harness/custom-map-manager-ui.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/custom-map-manager-ui.mjs), [WebAssembly/harness/custom-map-package-worker.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/custom-map-package-worker.mjs), [WebAssembly/harness/custom-map-store.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/custom-map-store.mjs), [WebAssembly/harness/custom-map-store_unit.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/custom-map-store_unit.mjs), [WebAssembly/harness/custom_map_manager_browser_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/custom_map_manager_browser_smoke.mjs), [WebAssembly/harness/skirmish_start_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/skirmish_start_smoke.mjs), [WebAssembly/shims/windows.h](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/shims/windows.h), [WebAssembly/tests/win32_find_file_smoke.cpp](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/tests/win32_find_file_smoke.cpp), [GeneralsMD/Code/GameEngine/Source/GameClient/MapUtil.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameClient/MapUtil.cpp). Reviewed 2026-07-25.
+
+### Manage saves and replays
+
+**Status: In active validation.** The desktop imports, exports, copies, and deletes configuration-isolated saves and replays; real round trips have focused coverage while broad long-session reliability continues to mature.
+
+The browser desktop can browse, import, export, copy, and delete saves and replays in the configuration-specific user-data folders. Compatibility copying is explicit and does not alter the source file.
+
+Real in-game save, load, and replay paths have focused integration coverage. Campaign breadth, long sessions, version transitions, and uncommon mod combinations remain active validation areas, so current issues should be checked before promising a particular edge case.
+
+Evidence: [WebAssembly/harness/save_load_game_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/save_load_game_smoke.mjs), [WebAssembly/harness/replay_desktop_transfer_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/replay_desktop_transfer_smoke.mjs), [WebAssembly/harness/replay-file-store.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/replay-file-store.mjs). Reviewed 2026-07-14.
+
+### Play peer-to-peer multiplayer
+
+**Status: Experimental.** The original UDP and lockstep protocol runs over direct WebRTC data channels, with decentralized discovery and continuing determinism and connectivity hardening.
+
+The project-operated Nostr relay and four deterministic public fallbacks are used for decentralized peer discovery and encrypted connection negotiation, not to relay the match itself. Discovery continues when any one configured relay is reachable. Game traffic flows through direct WebRTC data channels when a connection is established.
+
+Players choose the same room in Settings > Multiplayer, choose a commander name, launch Zero Hour, and use Multiplayer > Anonymous in the original UI. Ranked is reserved for a future service and currently shows a native coming-soon notice. Peers must use the same exact game and ordered mod composition. An empty room value keeps play offline.
+
+The native Anonymous lobby reports discovery, relay, room, and peer state. Its Reconnect action rebuilds browser discovery and asks the original LAN API to immediately refresh players and games after peer channels recover, without restarting Zero Hour.
+
+Short matches have been verified at up to four players, including native lobby discovery recovery. Long determinism runs, in-game disconnect and rejoin behavior, authenticated invitations, difficult NAT conditions, and signaling hardening remain active work.
+
+Evidence: [GeneralsMD/Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/MainMenu.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/MainMenu.cpp), [GeneralsMD/Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/LanLobbyMenu.cpp](https://github.com/Agusx1211/NewShoes/blob/main/GeneralsMD/Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/LanLobbyMenu.cpp), [WebAssembly/harness/lan_webrtc_playable_match_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/lan_webrtc_playable_match_smoke.mjs), [WebAssembly/harness/webrtc-udp-endpoint.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/webrtc-udp-endpoint.mjs), [WebAssembly/cloudflare/trystero-relay/worker_hibernation.test.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/cloudflare/trystero-relay/worker_hibernation.test.mjs), [WebAssembly/harness/webrtc_relay_selection_unit.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/webrtc_relay_selection_unit.mjs), [WebAssembly/harness/multiplayer_network_status_unit.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/multiplayer_network_status_unit.mjs). Reviewed 2026-07-18.
+
+### Transfer owned data to another device
+
+**Status: Experimental.** A user-confirmed encrypted flow transfers an installed game, selected mods and order, saves, and replays between two devices controlled by the owner.
+
+Both devices must be controlled by the owner, and the UI requires an explicit ownership confirmation. The transfer is a convenience for the user's own legally owned data; it is not a public download or redistribution service.
+
+The sending and receiving browsers negotiate through the project-operated Nostr relay and deterministic public fallbacks, then send the encrypted transfer directly over WebRTC. The Nostr relays do not carry installed archives or user files. Browser storage and network conditions still determine whether a large transfer can complete.
+
+Evidence: [WebAssembly/harness/launcher-device-transfer.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/launcher-device-transfer.mjs), [WebAssembly/harness/webrtc_relay_selection_unit.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/webrtc_relay_selection_unit.mjs), [WebAssembly/harness/device_transfer_browser_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/device_transfer_browser_smoke.mjs), [WebAssembly/harness/device-transfer-protocol.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/device-transfer-protocol.mjs). Reviewed 2026-07-18.
+
+### Configure and diagnose the runtime
+
+**Status: Supported.** The launcher exposes display, shader, camera, cursor, performance, multiplayer, storage, hardware, and issue-capture interfaces.
+
+The desktop exposes resolution, windowed or fullscreen presentation, enhanced or classic shaders, camera zoom, original game cursors, performance overlay options, graphics diagnostics, multiplayer diagnostics, browser storage, and a live browser and hardware capability report. Original cursor frames are decoded locally from the user-owned game files into browser-standard images, retain their original hotspots and animation timing, and are preloaded before presentation.
+
+The issue recorder can capture a screenshot, annotations, browser and runtime logs, input and state evidence, and an optional short video into a .cncdump.json package. Long captures are serialized in bounded chunks instead of one giant JavaScript string. Diagnostics remain local until the user explicitly saves or uploads a dump.
+
+Detailed multiplayer capture is opt-in because it can be large. Credentials and discovery secrets are excluded from dumps. Reports should never include retail archives, disc images, product keys, or private credentials.
+
+Evidence: [WebAssembly/harness/issue-recorder.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/issue-recorder.mjs), [WebAssembly/harness/issue_recorder_unit.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/issue_recorder_unit.mjs), [WebAssembly/harness/issue_recorder_ui_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/issue_recorder_ui_smoke.mjs), [WebAssembly/harness/launcher-hardware-info.js](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/launcher-hardware-info.js), [WebAssembly/harness/original-cursor-assets.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/original-cursor-assets.mjs), [WebAssembly/harness/original_cursor_assets_unit.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/original_cursor_assets_unit.mjs), [WebAssembly/harness/launcher_polish_browser_smoke.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/launcher_polish_browser_smoke.mjs), [WebAssembly/harness/threaded_play_gate.mjs](https://github.com/Agusx1211/NewShoes/blob/main/WebAssembly/harness/threaded_play_gate.mjs). Reviewed 2026-07-20.
+
+## Requirements
+
+Use a modern browser on a desktop, phone, or tablet. Chrome and Chromium receive the most testing. Other modern browsers can work when they expose all required platform features, but Firefox and Safari do not yet receive the same validation.
+
+- WebAssembly and WebAssembly threads.
+- SharedArrayBuffer through a cross-origin-isolated page.
+- WebGL2 and OffscreenCanvas support suitable for the threaded renderer.
+- Web Audio.
+- OPFS and browser storage capacity for roughly a multi-gigabyte installed archive set.
+- Local file or folder selection appropriate to the chosen ownership path.
+- A graphical browser with pointer or touch input. Text-only browsers and embedded webviews are not supported game clients.
+
+The hosted site supplies HTTPS and the necessary cross-origin isolation headers. A self-hosted copy must do the same.
+
+A complete English Generals and Zero Hour copy is required. The project does not provide replacement downloads. Existing original media is supported, and digital copies are available through official storefronts linked by the launcher.
+
+LLM commanders are optional. They require a user-chosen OpenAI-compatible endpoint that the browser can reach and that permits requests from the site origin; any account, API key, model access, usage limits, and provider charges belong to that provider. HTTPS endpoints are portable. Current Chrome can prompt for Local Network Access to an HTTP private address; other browser/version combinations may require HTTPS or localhost.
+
+## First-time setup
+
+1. Open https://newshoes.gg/ in a supported modern browser.
+2. Choose Add Game Folder for a complete English installation. If the browser cannot grant access to a protected Steam folder, use the launcher's compatibility folder picker.
+3. Alternatively, choose Add Disc Images and select the complete Generals and Zero Hour media set together. Do not select only one disc from a multi-disc release.
+4. Review the detected source. Choose whether to retain source permission when the browser supports it and whether to install the validated runtime into browser storage.
+5. Keep the tab open while local extraction, hashing, validation, and OPFS installation finish. The first import can take several minutes.
+6. When Zero Hour appears in the game library, review Game & Display settings if desired and launch it.
+7. Use the original game menus after the canvas opens. On a touch screen, open Touch help for the gesture map and Keys for hotkeys and control groups; landscape is recommended. All picker operations require a person at the browser; a remote text agent cannot grant file permissions or provide the user's retail media.
+8. For optional remote play, start the external AgentBridge in Global or Camera mode. Before launch, open Remote Agent, enable it, enter the bridge's printed WebRTC URL and browser credential, choose a session ID and the same fixed mode, test the authenticated peer connection, and select Apply for next launch. Non-secret settings are remembered; browser-token storage is an explicit device-local choice.
+9. Give the bridge's separate REST address and API credential only to the trusted controller. Treat both credentials as secrets, and disable Remote Agent or close the bridge when the session is over.
+
+## Local data, privacy, and security
+
+Retail assets selected in the launcher are read locally and stored locally in the browser profile. They are not uploaded to Project New Shoes. Installed archives, mods, custom maps, saves, replays, preferences, and generated movie cache files live under browser-managed origin storage.
+
+The settings UI provides an anonymous analytics preference. Documented analytics are limited to broad feature, reliability, setting-category, and performance-bucket events. They exclude filenames, paths, disc labels, game data, save content, free text, issue dumps, and precise hardware or storage values. Global Privacy Control or Do Not Track disables analytics automatically, and advertising features are disabled.
+
+Imported mod installers are parsed, not executed. Native code found in a mod is not compatible with the WebAssembly engine. Browser origin data can be removed through the launcher or browser site-data controls, but deleting it can remove the installed game, mods, saves, and settings.
+
+Remote Agent is explicitly opt-in and uses separate browser and REST credentials. The browser credential stays in page memory by default and is stored in origin-local browser storage only when the operator explicitly enables device-local remembering. Turning that option off erases the saved token. The credential is never put in a URL and is excluded from public status and issue dumps. WebRTC signaling uses a one-way token-derived room and separately derived end-to-end encryption key; the project signaling relay cannot read SDP/ICE or agent traffic. Operators are responsible for securing the browser profile, external bridge, and trusted controller.
+
+LLM commander profiles and session transcripts are stored in the browser's IndexedDB. The configured endpoint receives the commander's mandate, compacted conversation, player-scoped game observations, and tool results directly from the browser. Project New Shoes does not proxy those requests. API keys are omitted from session exports, but users should still treat exported strategy transcripts as potentially sensitive.
+
+Network activity is feature-dependent:
+
+- Opening the hosted page downloads the open-source browser runtime.
+- Optional analytics sends only documented broad events when enabled.
+- Multiplayer uses the project-operated Nostr discovery relay plus public fallbacks, then direct peer-to-peer game channels.
+- Device transfer uses the same hybrid Nostr discovery set for encrypted connection negotiation, then connects the two participating devices directly for the confirmed encrypted transfer.
+- Testing or launching with Remote Agent opens outbound signaling connections from the browser and bridge, then exchanges agent traffic directly over a DTLS-encrypted WebRTC data channel. The signaling relay receives only a token-derived room identifier and encrypted SDP/ICE envelopes. A test performs only the authenticated probe and does not register a playable session. The bridge exposes its authenticated controller REST API on loopback by default.
+- An enabled LLM commander sends gameplay context and receives model responses from the OpenAI-compatible endpoint selected in its profile.
+- Diagnostics leave the device only when the user explicitly uploads a report.
+
+## Important limitations
+
+- Retail game data is required and not bundled.
+- Zero Hour is the current target; standalone vanilla Generals is not exposed.
+- Chrome and Chromium have the strongest validation.
+- Immersive VR is experimental and currently does not work well. Real-headset rendering, controls, comfort, performance, and compatibility remain incomplete.
+- Campaign, Challenge, save/load, replay, movies, long multiplayer sessions, reconnects, difficult NAT environments, performance, and remaining rendering fidelity continue to receive testing and fixes.
+- Browser storage is scoped to the current browser profile, device, and site origin unless the user exports or transfers data.
+- Native Windows mod DLLs and executables cannot run in WebAssembly.
+- LLM commanders are experimental. Model quality, latency, context limits, endpoint availability, CORS policy, and usage cost can affect play. The host owns model requests. Controller-neutral production, force assembly, and strategy-lease transitions are currently skirmish-only; LAN slot presentation exists, but the synchronized multiplayer form of those semantic requests is not yet implemented.
+- A web agent that only reads this site cannot play the canvas or operate local browser permissions. The public llms.txt, project-info.json, and guide are read-only knowledge resources; control requires a person to configure the separate authenticated Remote Agent interface.
+- Remote Agent is an experimental advanced interface. It does not bypass fog, shroud, stealth, radar, or fixed Camera-mode boundaries, and it does not guarantee that a controller understands the game or wins a match. Difficult NAT or firewall environments that require TURN can prevent the default peer-to-peer connection.
+- The live issue tracker is the authority for current bugs and planned work. Archived TODO.md and DONE.md snapshots are historical records, not the current backlog.
+
+## Troubleshooting
+
+### The browser reports missing capabilities
+
+Move to a current Chrome or Chromium build first. Avoid embedded browsers and private modes that disable persistent storage. Confirm that JavaScript, WebAssembly, graphics acceleration, and site storage are available. The Hardware & Browser settings panel shows the capabilities exposed by the current browser.
+
+### The folder picker cannot open a Steam directory
+
+Use Add Game Folder, then the compatibility folder picker offered by the launcher. Ensure both Generals and Zero Hour are installed in English and that the selected tree is complete.
+
+### An LLM commander cannot connect or take a turn
+
+Open the LLM AI Manager, load the provider's model catalog, and run diagnostics. The staged result distinguishes endpoint reachability, model availability, context metadata, chat completion, and an exact native function call. A native profile fails clearly when the endpoint emits only text or JSON; it never switches adapters automatically. Select the structured adapter explicitly only when that separate diagnostic passes. Confirm any API key and provider quota, and make sure the endpoint allows the site's origin through CORS. For an HTTP private-network address from the hosted HTTPS launcher, current Chrome may ask for Local Network Access permission; otherwise use HTTPS or localhost. If the provider does not report a context limit, keep a documented manual value. Session evidence records bounded protocol and tool errors plus every request and latency without exposing the API key in exports.
+
+### Media validation fails
+
+Select every disc or image from the Generals and Zero Hour set at the same time. Do not rename or extract only a few BIG archives as a substitute for a complete source. The error text and issue-report flow can preserve the failed validation stage without attaching retail data.
+
+### Installation runs out of space
+
+Use browser site-storage controls and the launcher Game Library to inspect or remove old local data. Preserve wanted saves and replays first. Installation needs room for the validated archive set plus browser overhead, mods, user data, and cached movies.
+
+### The game is slow or visually wrong
+
+Try the original 310 camera zoom, reduce the display size, compare enhanced and classic shader tiers, and inspect the optional performance overlay. Reproducible visual problems should include a screenshot or issue dump and the deployed build commit.
+
+### Multiplayer peers do not appear
+
+Confirm both players use the same room, compatible browsers, and exactly the same ordered game and mod composition. In Multiplayer > Anonymous, read the native discovery, relay, room, and peer status; if it is offline, stuck, or missing a peer, select Reconnect to rebuild discovery and refresh the original LAN player and game lists. NAT or relay limitations may still prevent a connection; multiplayer remains experimental.
+
+### Remote Agent does not connect
+
+Start the external AgentBridge first. Before launching Zero Hour, enable Remote Agent and make its WebRTC URL, browser credential, session ID, and Global or Camera mode exactly match the bridge output. Select Test connection to check peer-to-peer reachability, authentication, protocol, and fixed-mode agreement without creating a game session, then apply the configuration for the next launch. Keep the browser and REST credentials distinct. If signaling connects but WebRTC does not, the network may require a TURN relay that the default service does not provide.
+
+### Reporting a bug
+
+Use Settings > Game & Display > Report issue for a runtime problem, or open https://github.com/Agusx1211/NewShoes/issues. Include reproduction steps, browser and operating-system details, the version and commit from About, and an issue dump when appropriate. Never attach retail game archives, disc images, product keys, or private credentials.
+
+## Architecture
+
+The shipping runtime starts the C++ engine on an Emscripten pthread. The worker owns the blocking engine update loop, an OffscreenCanvas, the WebGL2 renderer, and synchronous OPFS access handles. The main browser realm owns the launcher desktop, file selection, settings, input forwarding, Web Audio nodes, movie preparation, device transfer, issue capture, and WebRTC discovery and transport bridges.
+
+The launcher streams user-owned archives into OPFS instead of copying the complete game into the JavaScript heap. The engine continues to open ordinary paths through its original filesystem seam. Closing the game persists user data, releases worker and storage ownership, shuts down audio and networking, and allows a clean relaunch.
+
+When explicitly configured, the browser imports a small adapter after the engine frame loop is ready and opens an outbound authenticated WebSocket to the separate Go AgentBridge. C++ remains authoritative for observation filtering and semantic actions, JavaScript validates and forwards the protocol at the browser boundary, and Go owns sessions, REST authentication, compact API responses, and bounded event delivery.
+
+Major mappings are:
+
+- Direct3D 8 and shipped shader model 1.1 behavior to WebGL2 and GLSL ES.
+- Miles-compatible audio calls to Web Audio buffers, streams, mixer buses, and 3D panners.
+- Win32 files, clocks, windows, and input to Emscripten, DOM APIs, and OPFS.
+- Original Bink movie presentation to a browser-side decoder and video surfaces.
+- Original UDP and LAN protocol boundaries to WebRTC data channels and browser discovery.
+- Human-accessible game state and semantic engine commands to an optional authenticated WebSocket, REST, and server-sent-event agent boundary.
+
+## Stable public resources
+
+- `https://newshoes.gg/` — Interactive launcher and browser runtime. Local game files and user interaction are required to play.
+- `https://newshoes.gg/project.md` — Self-contained capabilities, statuses, setup, local data handling, limitations, troubleshooting, architecture, evidence, and agent guidance.
+- `https://newshoes.gg/project-info.json` — Canonical structured project facts, capability status, review dates, evidence paths, and publication links.
+- `https://newshoes.gg/llms.txt` — Concise LLM-oriented discovery, answer guidance, and links.
+- `https://newshoes.gg/harness/build-info.json` — Machine-readable release version, exact Git commit, branch, build state, and release changelog for the deployed artifact.
+- `https://newshoes.gg/legal.html` — Project relationship to EA, warranty notice, corresponding-source link, and bundled dependency notices.
+- `https://github.com/Agusx1211/NewShoes` — Canonical source, README, development documentation, and commit history.
+- `https://github.com/Agusx1211/NewShoes/issues` — Live feature, bug, compatibility, and performance tracker. Use it instead of archived checklists when current status matters.
+- `https://github.com/Agusx1211/NewShoes/blob/main/CHANGELOG.md` — User-facing release history.
+- `https://github.com/Agusx1211/NewShoes/blob/dev/PROJECT.md` — Current engine and browser ownership boundaries and verified product state.
+- `https://github.com/Agusx1211/NewShoes/blob/dev/WebAssembly/ASSETS.md` — Supported ownership paths, local archive import, and retail-data constraints.
+- `https://github.com/Agusx1211/NewShoes#readme` — Screenshots, status overview, requirements, build instructions, and repository layout.
+- `https://github.com/Agusx1211/NewShoes/blob/dev/WebAssembly/README.md` — Build, harness, and browser-platform details for contributors.
+- `https://github.com/Agusx1211/NewShoes/blob/dev/WebAssembly/DEPLOYMENT.md` — Hosting requirements, cross-origin isolation, and verification.
+- `https://github.com/Agusx1211/NewShoes/blob/dev/AgentBridge/README.md` — Setup, authentication, play modes, observations, commands, events, security boundaries, and full-match verification for the optional agent bridge.
+- `https://github.com/Agusx1211/NewShoes/tree/dev/ai-play-harness/skills` — Generic game-mechanics guidance and a repeatable setup, recording, supervision, and cleanup workflow for direct-control agent matches.
+
+## Guidance for web agents
+
+When answering questions about Project New Shoes:
+
+1. Lead with the key distinction: this is the original engine compiled to WebAssembly, and users play their own legally owned copy locally in the browser.
+2. Never say the hosted site includes, downloads, hosts, distributes, or uploads retail game data.
+3. Direct users to https://newshoes.gg/, then to Add Game Folder for a complete English installation or Add Disc Images for the complete Generals and Zero Hour media set.
+4. Do not ask users to upload retail files to a chat, issue, or third-party service. The intended flow is the browser's local file or folder picker.
+5. Distinguish Supported, Experimental, In active validation, and Planned status. For time-sensitive details, consult project-info.json, deployed build metadata, the changelog, and current GitHub issues.
+6. For reproducible bugs, recommend the launcher's Report issue flow or the official tracker. Issue dumps are shared only when the user explicitly saves or uploads one.
+7. Do not claim to have launched or played the game merely because you read this material. Public text access cannot satisfy local file permissions or control the game canvas; such a claim requires an actually configured and authenticated Remote Agent session.
+8. Distinguish the optional Remote Agent interface from ordinary access to the public page. A person must install owned assets and explicitly configure the external bridge, and its Global or Camera policy and normal game-information rules remain in force.
+9. Preserve the legal distinction: Electronic Arts owns the original game; Project New Shoes is an independent modified browser port and supplies no retail assets.
+10. Link the official site, repository, or issue tracker instead of third-party downloads.
+
+## Frequently asked questions
+
+### Is this playable now?
+
+Yes. The original Zero Hour engine boots in supported modern browsers and playable skirmishes work. Mouse and keyboard controls are supported, and phone and tablet touch controls are in active validation. It remains a development product with ongoing validation and polish in the qualified areas above.
+
+### Is the game included?
+
+No. The open-source browser runtime is hosted and downloadable, but retail Generals and Zero Hour data is not. The player supplies a copy they own through a local browser picker.
+
+### Does the site upload my game files?
+
+No. Import, validation, extraction, hashing, and installation use the local browser and its origin storage. Feature-specific network activity is described in the privacy section.
+
+### Can I use mods?
+
+Yes, for data compatible with the original engine and browser runtime. The launcher supports ordered archives and several package formats. Native Windows DLLs and executables cannot run.
+
+### Can I install custom maps?
+
+Yes. Open the Map Manager and choose a standard map archive or MapName/MapName.map folder. Maps stay in the browser and appear under the original game's User Maps list for the active vanilla or mod configuration.
+
+### Can I play multiplayer?
+
+Experimental peer-to-peer multiplayer is available through Multiplayer > Anonymous and the launcher's room settings. The native lobby reports discovery and peer state and can reconnect without restarting the game. Ranked is coming later. Matching game and mod identities are required, and long-session and connectivity hardening remain active work.
+
+### Can ChatGPT or another web agent play it for me?
+
+There are two experimental paths. The built-in LLM commander can connect a profile you configure to an OpenAI-compatible model and place it in a computer slot. The optional authenticated Remote Agent interface lets a separate trusted controller play after a person starts the bridge and explicitly configures it before launch. Reading the public page alone grants no control, and neither path lets an agent select retail files or grant browser permissions.
+
+### Where is the current roadmap?
+
+Use the open and closed GitHub issues at https://github.com/Agusx1211/NewShoes/issues. Archived port-era checklists are historical only.
+
+### How do I verify which build is deployed?
+
+Open About in the launcher or read https://newshoes.gg/harness/build-info.json. It identifies the release version and exact Git commit embedded in the deployment.

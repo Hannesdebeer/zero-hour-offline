@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zero Hour — Browser offline edition</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#111714;color:#e9eee9}body{max-width:780px;margin:7vh auto;padding:24px;line-height:1.6}h1{font-size:2.5rem;line-height:1.1}h2{font-size:1.15rem}button,a.action{font:inherit;display:inline-block;background:#b7e496;color:#11210c;border:0;border-radius:8px;padding:13px 20px;font-weight:700;cursor:pointer;text-decoration:none;margin:6px 10px 6px 0}button:disabled{opacity:.5;cursor:wait}a{color:#c5eba9}.panel{background:#1c2822;padding:20px;border:1px solid #3b5144;border-radius:12px;margin:20px 0}.muted{color:#b5c4ba}#status{white-space:pre-line}code{word-break:break-all}progress{width:100%}[hidden]{display:none!important}
+</style><script type="module" src="./offline-home.mjs"></script></head>
+<body><p class="muted">INDEPENDENT OFFLINE EDITION · PROJECT NEW SHOES 0.8.4</p>
+<h1>Prepare once.<br>Play offline in Chrome.</h1>
+<p>This edition keeps its browser engine and your game library on this device. No separate app or local server is needed on the playing Mac.</p>
+<div class="panel"><h2>1. Keep the engine offline</h2><p>Connect to the internet for the first preparation. This saves a complete, verified engine version in this Chrome profile.</p><button id="prepare">Prepare offline engine</button><button id="check">Check offline readiness</button><progress id="progress" hidden></progress><p id="status" role="status">Checking this browser…</p></div>
+<div class="panel"><h2>2. Add your game files locally</h2><p>In the game launcher, choose <b>Add Game Folder</b> and select your recovered game-data folder. Choose <b>Install</b> to keep it in this browser. Game files are processed locally and are never uploaded.</p><a class="action" id="play" href="./game.html?shellmap=0&amp;shaderTier=ff" hidden>Open Zero Hour launcher</a><p id="library"></p></div>
+<p>After both checks pass, bookmark this address and reopen it in the same Chrome profile. You do not need to install it as an app. First preparation must happen on each Mac.</p>
+<p class="muted">Keep your original game-data backup. Private browsing, managed storage restrictions, clearing site data or low-space eviction can remove this setup. Separate original Generals mode is unavailable. Solo skirmish is the tested scope; optional movies are not included.</p>
+<p><a href="./legal.html">Engine license</a> · <a href="./notices/MODIFICATIONS.txt">Edition changes</a> · <a href="./notices/NewShoes-source-3ccaa0e9.tar.gz">Corresponding engine source</a></p>
+</body></html>

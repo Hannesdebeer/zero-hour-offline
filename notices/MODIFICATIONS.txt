@@ -1,0 +1,10 @@
+Private offline packaging,2026-10-25. Engine version0.8.4,source commit3ccaa0e9af66889be183ca910851e881d47d437c.
+The WebAssembly engine binaries are unchanged. Local additions: Python read-only loopback launcher, Mac command entry, offline installer HTML/module and data manifest. Changed runtime web files: index.html removes Cloudflare analytics; analytics.mjs clears Google measurement ID; multiplayer_launch_policy.mjs disables automatic peer discovery. The server restricts network requests to its own origin. Originalcopyrights/notices are retained. This is modified independent software, not an Electronic Arts product or endorsement.
+
+The asset-manager worker URL is resolved relative to its module using import.meta.url so the independent offline preparation page can use the official local importer. The loopback server allows top-level navigation to its landing page while rejecting cross-site resource reads.
+
+Browser-only edition: added versioned SHA-256-verified service-worker precache and readiness page; removed the legacy service-worker retirement script from game.html. No retail assets are included in this deployment. Existing analytics and automatic peer discovery remain disabled. Worker cache responses preserve isolation headers. Updates wait until previous clients close. Local test import fixtures and server are excluded from deployment.
+
+Preferred source for this edition’s offline wrapper and build logic is in Offline-edition-source.zip next to this notice. It complements the included exact upstream source archive.
+
+GitHub Pages adaptation, 2026-10-26: the existing single offline worker supplies COOP/COEP/CSP on its cached responses. A bounded first-load reload enables isolation on headerless static hosts. Cache cleanup is scoped to the project URL path. Direct game bookmarks return to preparation when isolation is missing. The HTTPS-info request is module-relative for project subpaths. No second service worker is installed. This design uses the public COOP/COEP service-worker technique documented by https://github.com/gzuidhof/coi-serviceworker (MIT), rather than copying its implementation.

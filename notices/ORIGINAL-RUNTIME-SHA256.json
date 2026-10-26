@@ -1,0 +1,777 @@
+{
+  "commit": "3ccaa0e9af66889be183ca910851e881d47d437c",
+  "version": "0.8.4",
+  "total_bytes": 15940903,
+  "files": [
+    {
+      "path": "LICENSE.md",
+      "bytes": 37308,
+      "sha256": "449838bc0bc00c5f7a4f9b665d4e13dc5656b9c3b025011edc42b4533d5463c0",
+      "source": "https://newshoes.gg/LICENSE.md"
+    },
+    {
+      "path": "_headers",
+      "bytes": 125699,
+      "sha256": "9af3838c001d03903690c968fca34d642b56a63b914ae7385498139e85d2385b",
+      "source": "https://newshoes.gg/_headers"
+    },
+    {
+      "path": "_redirects",
+      "bytes": 125699,
+      "sha256": "9af3838c001d03903690c968fca34d642b56a63b914ae7385498139e85d2385b",
+      "source": "https://newshoes.gg/_redirects"
+    },
+    {
+      "path": "coi-serviceworker.js",
+      "bytes": 790,
+      "sha256": "f09aafd6670fc3c02a2fcaa0bd14771cd933bc2c3e11cd2f6f4902097cd21fae",
+      "source": "https://newshoes.gg/coi-serviceworker.js"
+    },
+    {
+      "path": "dist-threaded-release/cnc-port.js",
+      "bytes": 268991,
+      "sha256": "8fde1eb21d6442401dc9b900d95d2df64dfb4b0d491346f01c05dd81cff4d938",
+      "source": "https://newshoes.gg/dist-threaded-release/cnc-port.js"
+    },
+    {
+      "path": "dist-threaded-release/cnc-port.wasm",
+      "bytes": 8107874,
+      "sha256": "1b6ad223455e52d2c9f67c934f3118881c8567bf0493ed559ca037e3bd74c055",
+      "source": "https://newshoes.gg/dist-threaded-release/cnc-port.wasm"
+    },
+    {
+      "path": "dist-threaded-release/cnc-port.worker.js",
+      "bytes": 2219,
+      "sha256": "a8982fbc8dcdd4c377f0bd4fee836ef6b6adba8159573383b4dd90cd10ba5bbe",
+      "source": "https://newshoes.gg/dist-threaded-release/cnc-port.worker.js"
+    },
+    {
+      "path": "harness/agent-bridge-config.mjs",
+      "bytes": 4562,
+      "sha256": "a7f94e94b310a7038cf4edd4a105640c03865d11c4ee6827a577bb1eeb58e3be",
+      "source": "https://newshoes.gg/harness/agent-bridge-config.mjs"
+    },
+    {
+      "path": "harness/agent-webrtc-transport.mjs",
+      "bytes": 8656,
+      "sha256": "d79568d6ab0635b7c806048fa0a35070d20cdbc22432350421d0bd9ea8f51782",
+      "source": "https://newshoes.gg/harness/agent-webrtc-transport.mjs"
+    },
+    {
+      "path": "harness/agent_bridge.mjs",
+      "bytes": 28097,
+      "sha256": "68a1ece0ed34594c3c56138c8a71dc628c2a62e7728eecf0db997f85df0d2cfb",
+      "source": "https://newshoes.gg/harness/agent_bridge.mjs"
+    },
+    {
+      "path": "harness/analytics.mjs",
+      "bytes": 18965,
+      "sha256": "6802da390fe326761f4b0bbb2b5e5174627d8938acadf9cb6143a05b752bd491",
+      "source": "https://newshoes.gg/harness/analytics.mjs"
+    },
+    {
+      "path": "harness/assets/brand/project-new-shoes-apple-touch.png",
+      "bytes": 38804,
+      "sha256": "6cd13bdf73fefdcc3f0a3839130cd6ec5de41119e509c377179df79fb1ea30f8",
+      "source": "https://newshoes.gg/harness/assets/brand/project-new-shoes-apple-touch.png"
+    },
+    {
+      "path": "harness/assets/brand/project-new-shoes-icon-192.png",
+      "bytes": 43319,
+      "sha256": "ae54d3f43bd85ceef444273a4482d8dad8aac0b2e507172886c79ba8829dd8b5",
+      "source": "https://newshoes.gg/harness/assets/brand/project-new-shoes-icon-192.png"
+    },
+    {
+      "path": "harness/assets/brand/project-new-shoes-icon-512.png",
+      "bytes": 252275,
+      "sha256": "633ebff58ffbe4802d4ce0f8f4a4e6e72c1f68237115316353d3f455f6d51dd6",
+      "source": "https://newshoes.gg/harness/assets/brand/project-new-shoes-icon-512.png"
+    },
+    {
+      "path": "harness/assets/brand/project-new-shoes.ico",
+      "bytes": 105941,
+      "sha256": "d9229a14d9cccaaae3d928c2c52232764d9d382d2e4ca930a2795577a6f0541d",
+      "source": "https://newshoes.gg/harness/assets/brand/project-new-shoes.ico"
+    },
+    {
+      "path": "harness/assets/games/card-back-war.webp",
+      "bytes": 36402,
+      "sha256": "a360439c39705c073805757adcc71ed934f23db191c33d3aafc55ed678b1a465",
+      "source": "https://newshoes.gg/harness/assets/games/card-back-war.webp"
+    },
+    {
+      "path": "harness/assets/launcher-logo.webp",
+      "bytes": 22730,
+      "sha256": "d8c9d67480d47cf3b3cce5cc88e12175006d06a3fd32f564c0a353aab4d4fb54",
+      "source": "https://newshoes.gg/harness/assets/launcher-logo.webp"
+    },
+    {
+      "path": "harness/assets/zeroh-autumn-offensive-1440p.webp",
+      "bytes": 497218,
+      "sha256": "ff2807f61dc51135c0654b08d98077eceb342dbbbf4e8bfcc70b88a2c981e0e2",
+      "source": "https://newshoes.gg/harness/assets/zeroh-autumn-offensive-1440p.webp"
+    },
+    {
+      "path": "harness/assets/zeroh-autumn-offensive-swatch.webp",
+      "bytes": 13266,
+      "sha256": "efa8f6b3bb07ff13703e149f135a538f820d1103ac28e06c0f3571002c41f812",
+      "source": "https://newshoes.gg/harness/assets/zeroh-autumn-offensive-swatch.webp"
+    },
+    {
+      "path": "harness/assets/zeroh-azul-armada-1440p.webp",
+      "bytes": 153280,
+      "sha256": "400133d75272da48b2795c27e9793640e61252bd11e5fbbb7aefbc2ce4c7dc81",
+      "source": "https://newshoes.gg/harness/assets/zeroh-azul-armada-1440p.webp"
+    },
+    {
+      "path": "harness/assets/zeroh-azul-armada-swatch.webp",
+      "bytes": 7530,
+      "sha256": "19a4bd4c2cc12906ed6d81f3f63a7880c756267ae2cb4194d1ac68b0656d6046",
+      "source": "https://newshoes.gg/harness/assets/zeroh-azul-armada-swatch.webp"
+    },
+    {
+      "path": "harness/assets/zeroh-bliss-at-war-4k.webp",
+      "bytes": 288726,
+      "sha256": "876e44aef3241233746b4dce284d2601125c4ff9e68ed4fc709e5011a170969e",
+      "source": "https://newshoes.gg/harness/assets/zeroh-bliss-at-war-4k.webp"
+    },
+    {
+      "path": "harness/assets/zeroh-bliss-at-war-swatch.webp",
+      "bytes": 6536,
+      "sha256": "89e55f16ea93efd458ee9a790d47a14d1d2ddfb5dcadb4a3928463e128680d20",
+      "source": "https://newshoes.gg/harness/assets/zeroh-bliss-at-war-swatch.webp"
+    },
+    {
+      "path": "harness/assets/zeroh-command-desert.webp",
+      "bytes": 105786,
+      "sha256": "68fb98ce602a80d5b17ccd10908d7050098519ce6dede3b6d8f575d47d0476c7",
+      "source": "https://newshoes.gg/harness/assets/zeroh-command-desert.webp"
+    },
+    {
+      "path": "harness/assets/zeroh-red-moon-front-1440p.webp",
+      "bytes": 107374,
+      "sha256": "9e823dc75ecd68217967645347f73a6247677cd1525c44d4cce3b10e489fa4c5",
+      "source": "https://newshoes.gg/harness/assets/zeroh-red-moon-front-1440p.webp"
+    },
+    {
+      "path": "harness/assets/zeroh-red-moon-front-swatch.webp",
+      "bytes": 3568,
+      "sha256": "ec5b6adebf42943cc65b52485c1c458aebc75bb61fcf5240b3fd83f13f7b7903",
+      "source": "https://newshoes.gg/harness/assets/zeroh-red-moon-front-swatch.webp"
+    },
+    {
+      "path": "harness/bink_decode_worker.mjs",
+      "bytes": 6434,
+      "sha256": "44073b7402a16e8407079c53f015b1aebe2f8190f26bf17ff63d5afa75c82dc3",
+      "source": "https://newshoes.gg/harness/bink_decode_worker.mjs"
+    },
+    {
+      "path": "harness/bink_decoder.mjs",
+      "bytes": 5065,
+      "sha256": "49702675c95d7a3cf65100e34002841f06c289bc69e4bbbb3a03189587d08e08",
+      "source": "https://newshoes.gg/harness/bink_decoder.mjs"
+    },
+    {
+      "path": "harness/bink_direct_runtime.mjs",
+      "bytes": 13974,
+      "sha256": "756b81e2d35de59ab8cc7acf4f86c5de67fd27cadbfe2b659372007c57217a74",
+      "source": "https://newshoes.gg/harness/bink_direct_runtime.mjs"
+    },
+    {
+      "path": "harness/bink_runtime.mjs",
+      "bytes": 18476,
+      "sha256": "067c11cc730d174fc693f80660d4440da014df9df63ce4e65419f14ecea664ba",
+      "source": "https://newshoes.gg/harness/bink_runtime.mjs"
+    },
+    {
+      "path": "harness/bridge.js",
+      "bytes": 1086380,
+      "sha256": "8dcedb6fc7e6ed93da2719c41ad2cf5477013868518ed862df3cd7a9cf6f5df6",
+      "source": "https://newshoes.gg/harness/bridge.js"
+    },
+    {
+      "path": "harness/build-info.json",
+      "bytes": 49939,
+      "sha256": "04b55b5446ec1bac32825795c2b7ef886c5689c871b16265614eeb8cac7b2249",
+      "source": "https://newshoes.gg/harness/build-info.json"
+    },
+    {
+      "path": "harness/camera-zoom-config.mjs",
+      "bytes": 1156,
+      "sha256": "a1a88aa4edbe04aa68c69a1faea01bcef5c255c9cfa9b6c53085bf717842beac",
+      "source": "https://newshoes.gg/harness/camera-zoom-config.mjs"
+    },
+    {
+      "path": "harness/clickteam-installer.mjs",
+      "bytes": 14238,
+      "sha256": "be03a06793ebd848c5a65079da6cfe192f58421b331cab363ac08819415d1a94",
+      "source": "https://newshoes.gg/harness/clickteam-installer.mjs"
+    },
+    {
+      "path": "harness/crash-diagnostics.mjs",
+      "bytes": 14221,
+      "sha256": "f503430a6de447fad08ee72bcd45b486d2e3e35103d4b4e57e169a41cc1f09c0",
+      "source": "https://newshoes.gg/harness/crash-diagnostics.mjs"
+    },
+    {
+      "path": "harness/cursor-style-config.mjs",
+      "bytes": 655,
+      "sha256": "fef011c32cdb9095e3485f143872575759fb872f8097d577bccd73ad09215f88",
+      "source": "https://newshoes.gg/harness/cursor-style-config.mjs"
+    },
+    {
+      "path": "harness/custom-map-manager-ui.mjs",
+      "bytes": 6870,
+      "sha256": "8d65ce031b671f84092279febcf8317b8dac1bfe8512e533dd2b33ca4761b11b",
+      "source": "https://newshoes.gg/harness/custom-map-manager-ui.mjs"
+    },
+    {
+      "path": "harness/custom-map-package-format.mjs",
+      "bytes": 6411,
+      "sha256": "b261098862fda5784c0a75ed9f4849ab523219c5d9a5b9b3e0287c380b15ddbb",
+      "source": "https://newshoes.gg/harness/custom-map-package-format.mjs"
+    },
+    {
+      "path": "harness/custom-map-package-importer.mjs",
+      "bytes": 2088,
+      "sha256": "d9a80a9f83d556a5f6d9d88df49917bbec0a3f65910aab6b7ecd23f81f09a539",
+      "source": "https://newshoes.gg/harness/custom-map-package-importer.mjs"
+    },
+    {
+      "path": "harness/custom-map-package-worker.mjs",
+      "bytes": 6310,
+      "sha256": "5184c76a8ea5c300ef0c85611a468846bac990968fc173a07929acc6ba918c10",
+      "source": "https://newshoes.gg/harness/custom-map-package-worker.mjs"
+    },
+    {
+      "path": "harness/custom-map-store.mjs",
+      "bytes": 13623,
+      "sha256": "379e1f02a5789a896883b7c72f07ed78ca834c212db52d76b01c7154b2c390a7",
+      "source": "https://newshoes.gg/harness/custom-map-store.mjs"
+    },
+    {
+      "path": "harness/d3d8_executor.mjs",
+      "bytes": 695187,
+      "sha256": "27006ef225fed877ea8c726b42ac1bbf2462af0522af887e7b309c2fa427b535",
+      "source": "https://newshoes.gg/harness/d3d8_executor.mjs"
+    },
+    {
+      "path": "harness/device-transfer-protocol.mjs",
+      "bytes": 5040,
+      "sha256": "ddb212fd8fd2c11152cc8e40f7b383f1fb47ab45abd7f3671a4794880fc9071c",
+      "source": "https://newshoes.gg/harness/device-transfer-protocol.mjs"
+    },
+    {
+      "path": "harness/display-resolution.mjs",
+      "bytes": 3409,
+      "sha256": "393aff1d62414b2226038401771723ae405e44a8b3b90436574767efa662c5d6",
+      "source": "https://newshoes.gg/harness/display-resolution.mjs"
+    },
+    {
+      "path": "harness/engine_realm_boot.mjs",
+      "bytes": 64214,
+      "sha256": "0127d36c72e8381f124e583d2e55b00e1eea496fc57d71bb90063de0c41662a1",
+      "source": "https://newshoes.gg/harness/engine_realm_boot.mjs"
+    },
+    {
+      "path": "harness/game-data-store.mjs",
+      "bytes": 8295,
+      "sha256": "e43cc7e79fea61db2bd16d4be4b046df8c862bdcb5e6a828e777be565b3be7fc",
+      "source": "https://newshoes.gg/harness/game-data-store.mjs"
+    },
+    {
+      "path": "harness/gdi_executor.mjs",
+      "bytes": 5136,
+      "sha256": "b2c9f9e8eb4d6a9fd6f741e3bb243379f7e2bc3d51567789d18730e6241924a9",
+      "source": "https://newshoes.gg/harness/gdi_executor.mjs"
+    },
+    {
+      "path": "harness/harness.css",
+      "bytes": 26091,
+      "sha256": "42a39bfc8c6f8ba6b18b2c71d917e04f54714244764a7fcc38e45661554facc6",
+      "source": "https://newshoes.gg/harness/harness.css"
+    },
+    {
+      "path": "harness/io_worker.mjs",
+      "bytes": 13876,
+      "sha256": "18b19a2f98b149cc3bd9fecc1c37fda74a31b9992ee20fb6ca48830ff7084b39",
+      "source": "https://newshoes.gg/harness/io_worker.mjs"
+    },
+    {
+      "path": "harness/issue-recorder.mjs",
+      "bytes": 59113,
+      "sha256": "e78758a0032ec15bd1f3a0de12e10bf6c309812bc0627511b144191fc1153cc3",
+      "source": "https://newshoes.gg/harness/issue-recorder.mjs"
+    },
+    {
+      "path": "harness/launcher-archive-specs.js",
+      "bytes": 3067,
+      "sha256": "fd24cc989ad3a7607a286dbc1349c6e5448d9caa81f9cd3a49337299bd55aaeb",
+      "source": "https://newshoes.gg/harness/launcher-archive-specs.js"
+    },
+    {
+      "path": "harness/launcher-asset-manager.mjs",
+      "bytes": 41216,
+      "sha256": "f2728bbb8d6fc49f3214b44d418b274a46ca3246ab984598df21379b4c2c9962",
+      "source": "https://newshoes.gg/harness/launcher-asset-manager.mjs"
+    },
+    {
+      "path": "harness/launcher-asset-worker.js",
+      "bytes": 49332,
+      "sha256": "631b13a243da9782bb85fbc56f16236e9ce4d36c59c859e3440a89e6ed09702e",
+      "source": "https://newshoes.gg/harness/launcher-asset-worker.js"
+    },
+    {
+      "path": "harness/launcher-build-info.js",
+      "bytes": 3212,
+      "sha256": "a14f4ea94c73180b542aeef43c3e60af27e739d5606cffbf2efc0f25a86ddcb5",
+      "source": "https://newshoes.gg/harness/launcher-build-info.js"
+    },
+    {
+      "path": "harness/launcher-desktop-apps.js",
+      "bytes": 39864,
+      "sha256": "2ebb84a9df808fdc70306d716b17c013f026e26421811a8481c556d1fdce0bad",
+      "source": "https://newshoes.gg/harness/launcher-desktop-apps.js"
+    },
+    {
+      "path": "harness/launcher-device-transfer.mjs",
+      "bytes": 29253,
+      "sha256": "d16d6d692e1c14bc22981b4da839ca41271b58821a40bf7321ddde0daf613f9d",
+      "source": "https://newshoes.gg/harness/launcher-device-transfer.mjs"
+    },
+    {
+      "path": "harness/launcher-entry.mjs",
+      "bytes": 410,
+      "sha256": "71e52f4a2e8ca5badd0ac3b2d2f26c82cb207a6bc91db72a33476be65d0680f1",
+      "source": "https://newshoes.gg/harness/launcher-entry.mjs"
+    },
+    {
+      "path": "harness/launcher-file-collector.mjs",
+      "bytes": 2064,
+      "sha256": "c584e18abdcaf0c8a2faea5ca5faef4114abb02ddaca7e79f986779700340d61",
+      "source": "https://newshoes.gg/harness/launcher-file-collector.mjs"
+    },
+    {
+      "path": "harness/launcher-games.css",
+      "bytes": 19964,
+      "sha256": "a22105a415be557373641ebe8e41f82756f21dd208ff689afac7fdc134cc5591",
+      "source": "https://newshoes.gg/harness/launcher-games.css"
+    },
+    {
+      "path": "harness/launcher-games.mjs",
+      "bytes": 107029,
+      "sha256": "2d34289610fd39fb3096a4837a483daa8f58824c156e08fb8b885cb32dfe741c",
+      "source": "https://newshoes.gg/harness/launcher-games.mjs"
+    },
+    {
+      "path": "harness/launcher-hardware-info.js",
+      "bytes": 20353,
+      "sha256": "0539fadeb88fc4e43fe343f44d9a8797e6fbdfa4eb7f0401cacb4ad99e846a79",
+      "source": "https://newshoes.gg/harness/launcher-hardware-info.js"
+    },
+    {
+      "path": "harness/launcher-os-shutdown.mjs",
+      "bytes": 771,
+      "sha256": "fed4dbe9ce4c37c1100a1bb521c3601139305f38fe7dfc062534f119317deb62",
+      "source": "https://newshoes.gg/harness/launcher-os-shutdown.mjs"
+    },
+    {
+      "path": "harness/launcher-retail-presentation.mjs",
+      "bytes": 19019,
+      "sha256": "c5d095ad5019362e3fe15d7bb640b13da32f78a22ce67d5727b84827d8cecd85",
+      "source": "https://newshoes.gg/harness/launcher-retail-presentation.mjs"
+    },
+    {
+      "path": "harness/launcher-runtime.css",
+      "bytes": 4974,
+      "sha256": "43ab5fe97209ea4424260a2802e163b9772ab813399823989420dd9a894aa9c7",
+      "source": "https://newshoes.gg/harness/launcher-runtime.css"
+    },
+    {
+      "path": "harness/launcher.css",
+      "bytes": 125450,
+      "sha256": "bfcc3eead7d130720c628f28411b3a27df9d92754463ff8bdbdabf5b13635638",
+      "source": "https://newshoes.gg/harness/launcher.css"
+    },
+    {
+      "path": "harness/launcher.js",
+      "bytes": 64721,
+      "sha256": "c95a504e4d95120dd171b646d5c25967c15e803b66ce6e8cbac7254232effc4c",
+      "source": "https://newshoes.gg/harness/launcher.js"
+    },
+    {
+      "path": "harness/llm-ai-agent.mjs",
+      "bytes": 25903,
+      "sha256": "76c1cfeb417c068b6e974fcd4c5d8453f24c944b49db1705146008b1189aa148",
+      "source": "https://newshoes.gg/harness/llm-ai-agent.mjs"
+    },
+    {
+      "path": "harness/llm-ai-game-runtime.mjs",
+      "bytes": 8774,
+      "sha256": "bd6aedcc1ebd5903b7304cd64eb849b6adc99c86cf758fa54d7d8fbd2cef40b0",
+      "source": "https://newshoes.gg/harness/llm-ai-game-runtime.mjs"
+    },
+    {
+      "path": "harness/llm-ai-game-tools.mjs",
+      "bytes": 45485,
+      "sha256": "ebaa114cf8d3d2e86c631e7199c270c8230767349f2860154df7260194798df8",
+      "source": "https://newshoes.gg/harness/llm-ai-game-tools.mjs"
+    },
+    {
+      "path": "harness/llm-ai-manager-ui.mjs",
+      "bytes": 39157,
+      "sha256": "bbaf4a2196a67f8af43a39de21a6167ea93c14c1454e6830db3d4cd554e12c07",
+      "source": "https://newshoes.gg/harness/llm-ai-manager-ui.mjs"
+    },
+    {
+      "path": "harness/llm-ai-manager.css",
+      "bytes": 14480,
+      "sha256": "8c4db093cab736c000e1c33240dc86cc3cda5faf83f8f9d83257d83e17b5b96c",
+      "source": "https://newshoes.gg/harness/llm-ai-manager.css"
+    },
+    {
+      "path": "harness/llm-ai-openai-client.mjs",
+      "bytes": 27614,
+      "sha256": "3c6cbe789e223e4fffb6b2579f0754ce7815d596d64d85ee07eabf07f3947355",
+      "source": "https://newshoes.gg/harness/llm-ai-openai-client.mjs"
+    },
+    {
+      "path": "harness/llm-ai-profile.mjs",
+      "bytes": 18932,
+      "sha256": "9dca26b6b7c7cfee766d1fa26fa821daadc07e73778170300356ffa4cd7e28e4",
+      "source": "https://newshoes.gg/harness/llm-ai-profile.mjs"
+    },
+    {
+      "path": "harness/llm-ai-store.mjs",
+      "bytes": 9647,
+      "sha256": "a9b2e3a3ca2198858e32857d50e06c6600efc83ec8f4475ea5ee629f9b0f5be0",
+      "source": "https://newshoes.gg/harness/llm-ai-store.mjs"
+    },
+    {
+      "path": "harness/llm-ai-strategy.mjs",
+      "bytes": 34765,
+      "sha256": "dd6888d54076e20fc60fc367df2fb0fc639366731644db89ad7232b693f22c7e",
+      "source": "https://newshoes.gg/harness/llm-ai-strategy.mjs"
+    },
+    {
+      "path": "harness/manifest.webmanifest",
+      "bytes": 605,
+      "sha256": "a29781f6e00cbc7c054eb1ff1503756006fde7d8ba5e7a3076f33304c37d9a2e",
+      "source": "https://newshoes.gg/harness/manifest.webmanifest"
+    },
+    {
+      "path": "harness/mod-context.mjs",
+      "bytes": 9882,
+      "sha256": "81abe0ec1b97aed98511308ce9cf097e6cfae54e262ffc7bdde616671b29bdbf",
+      "source": "https://newshoes.gg/harness/mod-context.mjs"
+    },
+    {
+      "path": "harness/mod-manager-ui.mjs",
+      "bytes": 17940,
+      "sha256": "6664ac9c980bafc0394abaa77a9d3e9d2bb2d39db912619cb768390090753893",
+      "source": "https://newshoes.gg/harness/mod-manager-ui.mjs"
+    },
+    {
+      "path": "harness/mod-package-format.mjs",
+      "bytes": 13915,
+      "sha256": "bea25da497ec10b8ecd1b8aa6aa5f400338e61e1f038af88c99eb89f02d1d4bd",
+      "source": "https://newshoes.gg/harness/mod-package-format.mjs"
+    },
+    {
+      "path": "harness/mod-package-store.mjs",
+      "bytes": 20991,
+      "sha256": "96632427abb626ee99b4ae2f742140ece7925fccdaebd62463d259a1bdbcbbb8",
+      "source": "https://newshoes.gg/harness/mod-package-store.mjs"
+    },
+    {
+      "path": "harness/mod-package-worker.mjs",
+      "bytes": 18721,
+      "sha256": "5b0ad8dc5ed2a917fd25a2f30b1ad7dab8d22c094d1e3fc001f9b0ca4df82e44",
+      "source": "https://newshoes.gg/harness/mod-package-worker.mjs"
+    },
+    {
+      "path": "harness/multiplayer-network-status.mjs",
+      "bytes": 4503,
+      "sha256": "f0386fccd4c01e3c21429cf3f2153335f551d701c980c2a5b9114edb21658344",
+      "source": "https://newshoes.gg/harness/multiplayer-network-status.mjs"
+    },
+    {
+      "path": "harness/multiplayer_identity.mjs",
+      "bytes": 4052,
+      "sha256": "1fab5c10bf561d54641e54e9359c072f7416f40d75c5ea5bebd613a1b7184e75",
+      "source": "https://newshoes.gg/harness/multiplayer_identity.mjs"
+    },
+    {
+      "path": "harness/multiplayer_launch_policy.mjs",
+      "bytes": 2447,
+      "sha256": "170a83b7883b99b635a3b1cee5c007496aab8e9c7906cc4f20b72d6efa66b5a5",
+      "source": "https://newshoes.gg/harness/multiplayer_launch_policy.mjs"
+    },
+    {
+      "path": "harness/network-diagnostics.mjs",
+      "bytes": 7510,
+      "sha256": "5ce08fbf832fefc0f231551cfd8e8fada405a0faf13ce42d2ea23f23b20c0b2a",
+      "source": "https://newshoes.gg/harness/network-diagnostics.mjs"
+    },
+    {
+      "path": "harness/opfs_realm_files.mjs",
+      "bytes": 10236,
+      "sha256": "3cc190703cfab2139483046e22d0793f4e2fff0d738eacfe2e3d01c890adaad7",
+      "source": "https://newshoes.gg/harness/opfs_realm_files.mjs"
+    },
+    {
+      "path": "harness/original-cursor-assets.mjs",
+      "bytes": 13675,
+      "sha256": "c2844db503e8df143c9775a62bce2d89faca3b3178bdd5cc7058d62e647c6e78",
+      "source": "https://newshoes.gg/harness/original-cursor-assets.mjs"
+    },
+    {
+      "path": "harness/play.mjs",
+      "bytes": 104646,
+      "sha256": "2f388d29cb5d7df2d00305c1133a7dd6ef10722a6559bbc05f1a7e8ee806cdab",
+      "source": "https://newshoes.gg/harness/play.mjs"
+    },
+    {
+      "path": "harness/replay-file-store.mjs",
+      "bytes": 5145,
+      "sha256": "0da368e9c73b8dc364886873f819eb790177037391faa10c440a2c69671d296a",
+      "source": "https://newshoes.gg/harness/replay-file-store.mjs"
+    },
+    {
+      "path": "harness/runtime-shutdown-sequence.mjs",
+      "bytes": 4875,
+      "sha256": "248c718943c019e4c6a61be81e5c7a79a2cac4f3e54b29e744e26f2450d93065",
+      "source": "https://newshoes.gg/harness/runtime-shutdown-sequence.mjs"
+    },
+    {
+      "path": "harness/save-persistence-coordinator.mjs",
+      "bytes": 1902,
+      "sha256": "f661a30706f4534149c6e4c0c57caa918c154045454408c256e104349599bd3c",
+      "source": "https://newshoes.gg/harness/save-persistence-coordinator.mjs"
+    },
+    {
+      "path": "harness/shader-tier-config.mjs",
+      "bytes": 884,
+      "sha256": "0e9751201f4d79cd5999ca788e2781beb8c543314339e6979f63783ba5acce90",
+      "source": "https://newshoes.gg/harness/shader-tier-config.mjs"
+    },
+    {
+      "path": "harness/touch-controls.mjs",
+      "bytes": 31299,
+      "sha256": "2fffe0e00e7f0f3cc0ce0b49b706e2546261f854813dce4c17980b82a68d9627",
+      "source": "https://newshoes.gg/harness/touch-controls.mjs"
+    },
+    {
+      "path": "harness/transfer-user-data-store.mjs",
+      "bytes": 9480,
+      "sha256": "ad101284894b2f6edcecb0e146d939317c54789343473517e877cb9e5bb77973",
+      "source": "https://newshoes.gg/harness/transfer-user-data-store.mjs"
+    },
+    {
+      "path": "harness/udp_realm_bridge.mjs",
+      "bytes": 9472,
+      "sha256": "2adcca749c4c02791dc373704aa5fa1878b04a95f50353c3ae0bb6f816fa93c1",
+      "source": "https://newshoes.gg/harness/udp_realm_bridge.mjs"
+    },
+    {
+      "path": "harness/vendor/7z-wasm/7zz.es6.js",
+      "bytes": 82918,
+      "sha256": "f2010cb8d734cac7290a2b27278b30f2bbcd0d354f900173b4cad6b7d46a767a",
+      "source": "https://newshoes.gg/harness/vendor/7z-wasm/7zz.es6.js"
+    },
+    {
+      "path": "harness/vendor/7z-wasm/7zz.wasm",
+      "bytes": 1651931,
+      "sha256": "e16c6997e2eaa89575c0dd1f305074be629c3f4d87246244d37fd19debc8a285",
+      "source": "https://newshoes.gg/harness/vendor/7z-wasm/7zz.wasm"
+    },
+    {
+      "path": "harness/vendor/7z-wasm/License.txt",
+      "bytes": 1932,
+      "sha256": "3d52f98857cb4b34e4ed4c637135884a65d0fa94aef7f992df4b149b6055e23a",
+      "source": "https://newshoes.gg/harness/vendor/7z-wasm/License.txt"
+    },
+    {
+      "path": "harness/vendor/7z-wasm/README.md",
+      "bytes": 1677,
+      "sha256": "7ea0e0d6a4bd2a94176894dfa8c7375b8dcdc32eec1d47659d73baba9558793b",
+      "source": "https://newshoes.gg/harness/vendor/7z-wasm/README.md"
+    },
+    {
+      "path": "harness/vendor/7z-wasm/package.json",
+      "bytes": 901,
+      "sha256": "5b85ec03b1786f4ca3a4cd05250810b4e9f7e93f29599ba37fecf0f69ca126ac",
+      "source": "https://newshoes.gg/harness/vendor/7z-wasm/package.json"
+    },
+    {
+      "path": "harness/vendor/7z-wasm/unRarLicense.txt",
+      "bytes": 1961,
+      "sha256": "bf6343bbe251ec177a0e8a371516c58350daac298eba6883cf978f456fae3d89",
+      "source": "https://newshoes.gg/harness/vendor/7z-wasm/unRarLicense.txt"
+    },
+    {
+      "path": "harness/vendor/cicdec-LICENSE.txt",
+      "bytes": 1530,
+      "sha256": "5345f7300cfc1ed415cf52beed18c367db1fd804ef1181105e72273fc28df746",
+      "source": "https://newshoes.gg/harness/vendor/cicdec-LICENSE.txt"
+    },
+    {
+      "path": "harness/vendor/noble-secp256k1-LICENSE.txt",
+      "bytes": 1110,
+      "sha256": "80e49272a4c81b0ded274b540d2b8089bd5f4d7d4fe1f2df309d463d7067c9c4",
+      "source": "https://newshoes.gg/harness/vendor/noble-secp256k1-LICENSE.txt"
+    },
+    {
+      "path": "harness/vendor/pako-LICENSE.txt",
+      "bytes": 1104,
+      "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539",
+      "source": "https://newshoes.gg/harness/vendor/pako-LICENSE.txt"
+    },
+    {
+      "path": "harness/vendor/pako.es5.min.js",
+      "bytes": 47282,
+      "sha256": "db7884b4efed9372efac6fda021309a4a4c441148ddeaac3ab5f034c3aebeb2d",
+      "source": "https://newshoes.gg/harness/vendor/pako.es5.min.js"
+    },
+    {
+      "path": "harness/vendor/primer-octicons-LICENSE.txt",
+      "bytes": 1068,
+      "sha256": "da259c8bd0de62713ccdcf88910aebca810644f98c2c912bad814fc79ea778df",
+      "source": "https://newshoes.gg/harness/vendor/primer-octicons-LICENSE.txt"
+    },
+    {
+      "path": "harness/vendor/seek-bzip-LICENSE.txt",
+      "bytes": 1120,
+      "sha256": "55dc6a336e0797a4aec8d21e1a31fb44d145381d9f930382931cd46557e524c3",
+      "source": "https://newshoes.gg/harness/vendor/seek-bzip-LICENSE.txt"
+    },
+    {
+      "path": "harness/vendor/seek-bzip.min.mjs",
+      "bytes": 12517,
+      "sha256": "04b40d1e23684ef7552817c41bd420c47fd3c7398b452f87b1274115838343fc",
+      "source": "https://newshoes.gg/harness/vendor/seek-bzip.min.mjs"
+    },
+    {
+      "path": "harness/vendor/trystero-LICENSE.txt",
+      "bytes": 1060,
+      "sha256": "e629f053669ceb04737f48da14fe5c711b8bd423cda686889725006011326d77",
+      "source": "https://newshoes.gg/harness/vendor/trystero-LICENSE.txt"
+    },
+    {
+      "path": "harness/vendor/trystero-nostr.min.mjs",
+      "bytes": 59664,
+      "sha256": "40465b586d35d1f0fd4fe6d57f774fe9521f7b1cabb75deaf416ce55fdd19446",
+      "source": "https://newshoes.gg/harness/vendor/trystero-nostr.min.mjs"
+    },
+    {
+      "path": "harness/webrtc-udp-endpoint.mjs",
+      "bytes": 28933,
+      "sha256": "3b6a6b69a27cfbd037acf9cb7ed2a8d812113aae832380024c2cdeb85d9baa6f",
+      "source": "https://newshoes.gg/harness/webrtc-udp-endpoint.mjs"
+    },
+    {
+      "path": "harness/webxr-controls.mjs",
+      "bytes": 28438,
+      "sha256": "c0841b0c81c856c40fc85d72a1be964f9ad6ed57881fff7146ed31bff316fdc3",
+      "source": "https://newshoes.gg/harness/webxr-controls.mjs"
+    },
+    {
+      "path": "harness/webxr-d3d8-command-stream.mjs",
+      "bytes": 9626,
+      "sha256": "1bf95a851d39e28523ec0422dcfac6ad1e478146fc30abfb6195b16866c1aa7d",
+      "source": "https://newshoes.gg/harness/webxr-d3d8-command-stream.mjs"
+    },
+    {
+      "path": "harness/webxr-d3d8-renderer.mjs",
+      "bytes": 41884,
+      "sha256": "b8b988b71d361ba53b529c1d7c5425c347f0ce007bf2706e1fc05c56ede5acaf",
+      "source": "https://newshoes.gg/harness/webxr-d3d8-renderer.mjs"
+    },
+    {
+      "path": "harness/webxr-runtime.mjs",
+      "bytes": 15859,
+      "sha256": "bc5db40b03d0f39de1a5f0a3723e6916ab5608a71296217cb85b7b20d3fb203d",
+      "source": "https://newshoes.gg/harness/webxr-runtime.mjs"
+    },
+    {
+      "path": "harness/webxr-settings.mjs",
+      "bytes": 2886,
+      "sha256": "ad6bbd3de7db9a91e1e3ac53509bf36f1c280175edbebe7ee6f7e164f39be482",
+      "source": "https://newshoes.gg/harness/webxr-settings.mjs"
+    },
+    {
+      "path": "llms.txt",
+      "bytes": 8060,
+      "sha256": "1449c9a1c94e2b1e36168c5d573d6f8d9da49ac72f2315ccc90e4103b1673a1e",
+      "source": "https://newshoes.gg/llms.txt"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "bytes": 612,
+      "sha256": "c00018d7d55ae8871d649fc7664b467ae397f8154efc06b73226278802913a35",
+      "source": "https://newshoes.gg/manifest.webmanifest"
+    },
+    {
+      "path": "project-info.json",
+      "bytes": 56261,
+      "sha256": "98fa7b93f18279a4b77b3abcf2601eec1cdcf669b69d0183c3a5346750d3aae9",
+      "source": "https://newshoes.gg/project-info.json"
+    },
+    {
+      "path": "project.md",
+      "bytes": 59532,
+      "sha256": "bc134e3c03400620d37b210dcda332930c0a20b1a09f95431afe7752382669cd",
+      "source": "https://newshoes.gg/project.md"
+    },
+    {
+      "path": "retire-service-worker.js",
+      "bytes": 380,
+      "sha256": "b7c172d177d968df41e0275a9d425d958773af9b0ddf8b1d7e8b7020d37899e4",
+      "source": "https://newshoes.gg/retire-service-worker.js"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 65,
+      "sha256": "884a244dc5dd9299cb7d78a0745ed78582de62c79c07d4baa5815e332d3003ef",
+      "source": "https://newshoes.gg/robots.txt"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 380,
+      "sha256": "f80c080c52b7738fe7da6158dd23d660acc5c61de9cfecbb94b6201f0097fb66",
+      "source": "https://newshoes.gg/sitemap.xml"
+    },
+    {
+      "path": "video-runtime/bink-decoder-SOURCE.txt",
+      "bytes": 584,
+      "sha256": "9ebbe0d1d9156d6da18b12b224840ad10e2279d6d491e38527b938b47d1b19b9",
+      "source": "https://newshoes.gg/video-runtime/bink-decoder-SOURCE.txt"
+    },
+    {
+      "path": "video-runtime/bink-decoder-manifest.json",
+      "bytes": 405,
+      "sha256": "3c8dd2689914b000457a9d36c8d3746b9e43d288c05097dca2370dd298c7d588",
+      "source": "https://newshoes.gg/video-runtime/bink-decoder-manifest.json"
+    },
+    {
+      "path": "video-runtime/bink-decoder.wasm",
+      "bytes": 104191,
+      "sha256": "f270277964c3136cab3dca5e0fccfa5448c71fa06cb94e26d37e55ae1d3851eb",
+      "source": "https://newshoes.gg/video-runtime/bink-decoder.wasm"
+    },
+    {
+      "path": "index.html",
+      "bytes": 125699,
+      "sha256": "9af3838c001d03903690c968fca34d642b56a63b914ae7385498139e85d2385b",
+      "source": "https://newshoes.gg/"
+    },
+    {
+      "path": "legal.html",
+      "bytes": 3881,
+      "sha256": "4bd0dd9609ff5622b16e9544066d7e0a8e2306f819b035babd85cf70d4381f4f",
+      "source": "https://newshoes.gg/legal"
+    }
+  ],
+  "failures": [],
+  "same_release_after": true
+}
